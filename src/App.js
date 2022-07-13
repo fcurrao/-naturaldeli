@@ -6,6 +6,9 @@ function App() {
   var nombre = 'FEDE';
   // var nombre = null;
   return (
+    <>
+    <NavBar /> 
+    
     <div className="App" style={{padding:10, marginTop: 10}}>
       <header className="App-header">
 
@@ -13,7 +16,7 @@ function App() {
         <p>
          HOLA MUNDO, yo soy {nombre? nombre : "NO  TENGO NOMBRE"}
         </p>
-        <NavBar />
+    
 
       
         <a
@@ -26,6 +29,7 @@ function App() {
         </a>
       </header>
     </div>
+    </>
   );
 }
 
