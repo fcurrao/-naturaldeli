@@ -8,13 +8,12 @@ function App() {
   return (
     <>
     <NavBar /> 
-    
+     
     <div className="App" style={{padding:10, marginTop: 10}}>
       <header className="App-header">
 
-        <NavBar />
         <p>
-         HOLA MUNDO, yo soy {nombre? nombre : "NO  TENGO NOMBRE"}
+         HOLA MUNDO!, yo soy  {nombre? nombre : "NO  TENGO NOMBRE"}
         </p>
     
 
