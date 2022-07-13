@@ -1,0 +1,256 @@
+https://stackblitz.com/
+
+**********************************************************
+***************************************
+CLASE 1 | repaso
+***************************************
+**********************************************************
+
+* var es en todo el documento
+
+* let es solo en un contexto nada mas, funcion por ejemplo.
+
+* const no puede cambiar
+
+* funciones flechas: ALGO = () => {}
+ 
+* ...array
+ 
+**********************************************************
+***************************************
+CLASE 2 | primeros usos REACT 
+***************************************
+**********************************************************
+
+* CREATE-REACT-APP ,  siempre asi!
+
+* FIBER! virtual dom. 
+(diffing y dsp muestra el dom con el dif(evento virtual dom))
+
+* (dentro de la carpeta ,  y en la terminal) npx create-react-app NOMBRE-DE-LA-APP
+cd NOMBRE-DE-LA-APP (para entrar)
+npm start
+local hosto 3000
+
+* readme.md : lo que se muestra en Github presentacion
+documentar y explicar, describir.
+
+* Gitignore : Las Carpetas que ignora GIT cuando sube
+
+* package.json : 
+Depedencias (librerias) que se instalaron
+Scripts: comandos , acciones, etc 
+eslint: herramientas de codigo (tipo usar comillas o simples, o espaciado, etc)
+
+* package-lock.json: Mantiene las versiones de las dependencias
+
+* node_modules: Todas las dependencias creadas por default (modulos, dependencias, librerias)
+
+* public: INDEX.HTML (id=root)( y carpeta con archivos otro.)
+
+* src:  TODO (todo, js, react , img, otros, svg, logos, etc..)
+
+* APP.js = PADRE
+
+* INDEX.JS = agarra el id=root , renderize el APP.js!
+(osea une el index.html con el app.js)
+
+
+* MUI  (mui.com) (como bootstrap) (nueva librerira, se agrega en package.json)
+npm install @mui/material @emotion/react @emotion/styled
+
+
+* swiperjs (carruselles, banner) (nueva libreria)
+npm install @mui/
+npm remove  o unistall
+
+* 
+
+* GITHUB CON VISUAL CODE :!
+
+* GIT HUB ( Usar Github Desktop) o :
+1 crear un repository en "github.com"
+2 poner en consola (cd carpeta del archivo) y poner "git init"
+3 luego poner "git remote add origin https://github.com/fcurrao/NombreRespositorio.git 
+4 y luego en la parte de git del Visual, manejo todo
+
+5 Ahora hago (Guarda,Almacena,Confirma,Sincroniza)(GACS)
+6 cambios: Control+S (se guarda) 
+7 Luego se almacena "cambios/changes" , "Almacenando todos los cambios"
+8 Confirmar en "control de codigo fuente" con el tilde. SE CREA UN "COMMIT"
+
+PASO OJO (TENER CUIDADO - NO HAY RETORNO! ) (solo volver y ver que se hizo y borrarlo manualmente) !!
+
+9 "Sincronizar cambios". SE CREA UN PUSH  O "Push" en commit
+10 Listo! actualizado
+
+PASO BORRAR COMMIT ?
+11 Si no se hizo el "paso 9" >> "Sincronizar cambios" , se puede "undo commit" (en commits)
+12 Y se vuelve atras 
+13 Listo! Vuelto atras.
+
+
+ 
+**********************************************************
+***************************************
+CLASE 3 | JSX | WEBPACK
+***************************************
+**********************************************************
+
+* DESTRUCTURAR EN OBJETOS Y METODOS
+
+const produt ={
+    tittle: 'remera',
+    price: '50';
+}
+const {tittle, price} = product
+
+console.log("nombre:" + title)
+No hace falta ponerle product.title
+con el title basta, porque arriba destructure
+y le dije que cada vez que use la constante
+tittle y price   las busque de el tittle y price
+de product
+
+
+* DESTRUCTURAR "TERNARIO"
+IF (true y false)
+
+if(product.tittle){
+    console.log("tiene titulo");
+} else{
+    console.log(" NO tiene titulo");
+}
+
+TERNARIO == (es para true y false)
+console.log(product.tittle ? "tiene titulo" : "NO tiene titulo");
+
+
+* POLYFILLS (RETROCOMPATIBILIDAD)
+-parche para que funcione en todos los navegadores.
+
+* WEBPACK: 
+es un modulo (esta en moduls) , transforma los elementos
+en elementos que pueda leer el navegador 
+
+
+
+* JSX Y TRASPLANTIX
+
+
+- SE USA CLASSNAME, no CLASS
+- camelCase se usa 
+
+-ejemplo =>
+var nombre = "fede";
+
+  <p>
+         HOLA MUNDO, yo soy {nombre? nombre : "NO  TENGO NOMBRE"}
+        </p>
+
+
+
+-ejemplo =>
+  <div className="App" style={{padding:10%; marginTop: 10px;}}>
+
+
+
+-ejemplo =>
+    const styleApp={{padding:10%; marginTop: 10px;}}
+
+  <div className="App" style={styleApp}>
+
+
+
+
+* funciones dentro del <>
+<button onClieck={funcion}> Click </button>
+
+
+*asses (dentro de public) guarda fotos y otras cosas
+
+* components (dentro de src (surce)) guarda los componentes
+
+* exportado el componetns
+ <NavBar /> en APPS
+fragment <> en cada componente
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<
