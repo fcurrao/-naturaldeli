@@ -1,5 +1,11 @@
 https://stackblitz.com/
 
+REPOSITORIO EJERCICIO PROFE:
+
+https://github.com/cortiz2894/test-ecommerce-34685
+
+
+
 **********************************************************
 ***************************************
 CLASE 1 | repaso
@@ -175,13 +181,34 @@ var nombre = "fede";
  <NavBar /> en APPS
 fragment <> en cada componente
 
+* se crea cada fragmentos (componentes) (cada js), y va uno dentro ode otro.
 
+ 
+**********************************************************
+***************************************
+CLASE 4 | COMPONENTES | PROPS | HOOK.
+***************************************
+**********************************************************
 
+* MAQUETACION FLEXBOX
 
+* se necesita un fragments que englobe todo
+* se crea cada fragmentos (componentes) (cada js), y va uno dentro ode otro.
 
+* Diseños modular (cada pieza aislada y luego se une en la pagina)
 
+* componentes basados en clases y componentes basados en funciones
 
+* componentes HOOK (son metodos con FUNCIONES ) => HOOK !.
 
+* pueden recibir props y usan JSX
+
+* props , pasa informacion de padre a hijo
+    <button onClick={funcionComprarMP}>Comprar</button>
+
+* En  un ECOMERCE , se pasaria un JSON o un array de productos, no se cargaria 1 por 1.
+
+* CLAVES DE CSS : before ?? ANTES de abrir o algo asi..
 
 
 

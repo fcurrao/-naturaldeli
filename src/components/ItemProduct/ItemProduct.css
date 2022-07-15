@@ -1,0 +1,19 @@
+
+
+
+
+.items{
+    color: red;
+    background-color: red;
+    flex-direction: column;
+    box-shadow: 1px 1px black;
+    
+    
+    
+}
+
+
+.items::before{
+    color: blue;
+    background-color: blue;
+}
