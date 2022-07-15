@@ -210,6 +210,7 @@ CLASE 4 | COMPONENTES | PROPS | HOOK.
 
 * CLAVES DE CSS : before ?? ANTES de abrir o algo asi..
 
+* pasar como {children} y en el uso poner entre <children> JSX </children>
 
 
 

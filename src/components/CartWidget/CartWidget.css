@@ -1,0 +1,17 @@
+.carritoDerecha {
+
+    background-color: transparent;
+    float: right;
+    width: 5%;
+    height: 20px;
+    justify-content: right;
+    text-align: right;
+    transform: translate(-5%, -5%);
+    padding-bottom: 0.3%;
+    box-shadow: 1px 5px 5px #00000047;
+
+}
+
+.carro{
+    width: 80%;
+}

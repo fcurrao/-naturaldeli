@@ -1,14 +1,23 @@
 
 
-
+.item-product {
+    float: left;
+    width: 33.33%;
+    box-shadow: 1px 1px 5px #afafaf47;
+    border: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-right: 10px;
+   
+}
 
 .items{
     color: red;
     background-color: red;
     flex-direction: column;
     box-shadow: 1px 1px black;
-    
-    
     
 }
 

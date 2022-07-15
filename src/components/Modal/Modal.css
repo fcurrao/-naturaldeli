@@ -1,0 +1,44 @@
+.list-products {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.modal-custom {
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    width: 400px;
+    height: 500px;
+    box-shadow: 1px 5px 5px #00000047;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.modal-custom:before {
+    /* content: ""; */
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+
+
+.modal-custom2 {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}

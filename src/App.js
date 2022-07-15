@@ -1,39 +1,40 @@
 
-import './App.css';
 import NavBar from './components/NavBar/NavBar';
-import ItemContainer from './components/ItemContainer/ItemContainer';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import Modal from './components/Modal/Modal';
+import './App.css'
 
 function App() {
-  var nombre = 'FEDE';
-  // var nombre = null;
+  // const styleApp = { padding: '10px 20px', marginTop : 10}
   return (
+    //JSX
     <>
-      <NavBar /> 
+   
 
-  <header className="App-header">
-  <p>
-         HOLA MUNDO!, yo soy  {nombre? nombre : "NO  TENGO NOMBRE"}
-        </p>
-  </header>
 
-<div className="App" name="container" style={{padding:10, marginTop: 10}}>
 
-<ItemContainer section="Productos en oferta" />
-   <ItemContainer section="Productos de temporada" />
-   <ItemContainer section="Productos mas comprados" />
+ 
+      <NavBar />
+     
 
-    <Modal title="TITULO DEL POPUP">
-      <form>
-        <input type="text"/>
-      </form>
+        <ItemListContainer className="cotenedores" greeting="Productos en oferta"/>
+        <ItemListContainer className="cotenedores" greeting="Productos de temporada"/>
+        <ItemListContainer className="cotenedores" greeting="Productos mas comprados"/>
+   
 
-    </Modal>
-       
-    </div>
+      <Modal title="MODAL DE REGISTRO">
+        <form>
+          <input type="text" />
+          <input type="text" />
+          <input type="text" />
+          <button>enviar</button>
+        </form>
+      </Modal>
 
-  
-        
+ 
+
+
+
 
     </>
   );
