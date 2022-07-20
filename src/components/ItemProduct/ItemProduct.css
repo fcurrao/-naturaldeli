@@ -2,7 +2,7 @@
 
 .item-product {
     float: left;
-    width: 33.33%;
+    width: 200px;
     box-shadow: 1px 1px 5px #afafaf47;
     border: 10px;
     display: flex;

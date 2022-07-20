@@ -2,7 +2,8 @@
 .conteinerStyling{
     background-color: pink;
     box-shadow: 1px 1px black;
-    height: 700px;
+    height: 500px;
+    width: 600px;
     border: solid black;
     
 }

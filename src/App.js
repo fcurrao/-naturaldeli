@@ -22,14 +22,14 @@ function App() {
         <ItemListContainer className="cotenedores" greeting="Productos mas comprados"/>
    
 
-      <Modal title="MODAL DE REGISTRO">
+      {/* <Modal title="MODAL DE REGISTRO">
         <form>
           <input type="text" />
           <input type="text" />
           <input type="text" />
           <button>enviar</button>
         </form>
-      </Modal>
+      </Modal> */}
 
  
 

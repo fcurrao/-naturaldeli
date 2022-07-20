@@ -6,6 +6,9 @@ https://github.com/cortiz2894/test-ecommerce-34685
 
 
 
+
+/////////////////////////////////////////////////////////////////////////////////
+
 **********************************************************
 ***************************************
 CLASE 1 | repaso
@@ -216,31 +219,132 @@ CLASE 4 | COMPONENTES | PROPS | HOOK.
 
 
 
+* CSS : 
+.countProd button {
+padding: 20px;
+font-size: 27px;
+}
+
+.countProd p {
+font-size: 22px;
+}
+
+.countProd {
+  display flex;
+  width:100%;
+  justify-content: center;
+}
+
+
+
+**********************************************************
+***************************************
+CLASE 5 | COMPONENTES | PROPS, DOM SYNC, EVENTOS , ESTADOS (hook) , CICLOS.
+***************************************
+**********************************************************
+
+* HOOK:
+usestate
+set
+useref
+
+setname
+
+
+
+*************
+REACT !! RENDERIZA CON CAMBIO DE PROPS O CAMBIO DE ESTADOS
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-tarea-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+import * as React from 'react';
+import {useState} from 'react'
+import './style.css';
+
+export default function App() {
+
+  
+const [fechaTocada, setfechaTocada] = useState(0)
+const [counter, setCounter] = useState(0) 
+
+const clickA = () => {
+    if (stock = true){
+        console.log("fecha", new Date())
+        setCounter(counter + 1)
+        setfechaTocada(new Date().tolocaleString());
+}}
+
+  return (
+      <div>
+<button onClick={clickA}>Contando</button>
+<p>clicks: {counter} + Ultimo click: {fechaTocada}</p>
+</div>
+
+  );
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+* ESTADOS (estado de ciclo de vida de cada compo)
+- montaje
+- actualizacion (se puede actualizar las veces que se quiera, hasta que se desmonte)
+- desmontaje
+(ejemplo el estado de las cards, se montan, se actualiza cuando cambio el numero  y se desmonta cuando aparece otra cosa o cambio de page)
+
+
+* COMPONENTES FUNCIONALES (HOOK)
+useEffect (fn,filter)
+- trae la informacion de los productos!!!!!
+
+con useEffect: 
+- montaje
+- actualizacion (se puede actualizar las veces que se quiera, hasta que se desmonte)
+- desmontaje
+
+// aca en useEffect  se usa en login en usuario (montaje)
+// aca en useEffect se llama a la api y listo  (montaje)
+        // fetch().then(
+            // setProduct())
+    // para agregar un producto dsp hacer una actualizacion
+
+    useEffect(()=>{
+        console.log("ejecuto en fase de actualizacion")
+         // fetch().then(
+            // setProduct())
+    },[])
+
+si pongo el [] vacio es solo en montaje
+si no lo pongo es en actualizacion
+
+
+* desmontaje
+ useEffect(()=>{
+
+return () =>{
+  // aca va la parte del desmontaje
+}
+  },[])
 
 
 
 
 
+* change
+
+    useEffect(()=>{
+        console.log("ejecuto en fase de actualizacion")
+         // fetch().then(
+            // setProduct())
+    },[counter])
+// se ejecuta cada vez que cambie el estado COUNTER
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* los event listener , hay que desmontarlas
 
 
 
