@@ -17,7 +17,7 @@ const {title,image,price,stock}=data
             <ItemCount stock={stock} initial={1} />           
           
 
-
+            <button className="btn btn-group2" onClick={onSubmit}>Detalle Producto</button>
             <button className="btn btn-group" onClick={onSubmit}>Comprar</button>
         </div> 
     )
