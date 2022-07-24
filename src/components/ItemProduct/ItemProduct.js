@@ -18,7 +18,7 @@ const {title,image,price,stock}=data
           
 
 
-            <button onClick={onSubmit}>Comprar</button>
+            <button className="btn btn-group" onClick={onSubmit}>Comprar</button>
         </div> 
     )
 }

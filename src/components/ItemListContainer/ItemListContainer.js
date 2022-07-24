@@ -1,5 +1,5 @@
 
-    import {useEffec, useState} from 'react'
+    import {useEffect, useState} from 'react'
     import ItemList from "../ItemList/ItemList"
     import ItemProduct from "../ItemProduct/ItemProduct"
     import './ItemListContainer.css'
@@ -11,24 +11,26 @@ const ItemListContainer = ({greeting}) => {
 
     const getProcuts = new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(product)         
+            resolve(products)         
         }, 2000);
     
     })
 
 
     // se trae los productos , solo en el montaje nomas.
-    useEffec(()=>{
+    useEffect(()=>{
 
         getProcuts
         .then ((data) => {
-            console.log("Productos: " + data)
-            setlistProducts(res)
+            console.log("Productos: ")
+            console.log(data)
+            setlistProducts(data)
         })
         .catch((error)=>{
             console.log("la llamada fallo" + error)
         })
-        .finally (()=>{
+        .finally ((data)=>{
+
             console.log("finally")
         })
 

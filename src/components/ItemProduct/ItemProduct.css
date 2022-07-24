@@ -30,7 +30,7 @@
 
 .item-product {
     float: left;
-    width: calc(20% - 8px);
+    width: calc(22% - 5px);
     box-shadow: 1px 1px 5px #afafaf47;
     border: 10px;
     display: flex;
@@ -41,6 +41,7 @@
     position: relative;
     margin-right: 10px;
     margin-bottom: 10px;
+    padding-bottom: 8px;
 
     /* .float-options {
         position: absolute;
@@ -68,7 +69,7 @@
     }
     
     img {
-        width: 80%;
+        width: 85%;
         margin-top: 15px;
     }
     .countProd {
@@ -112,4 +113,11 @@
 }
 .item-product:nth-of-type(5n) {
     margin-right: 0px !important;
+}
+
+
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+    border: beige;
+    background-color: #9d9d06;
 }
