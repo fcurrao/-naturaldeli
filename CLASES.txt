@@ -106,6 +106,44 @@ CLASE 3 | JSX | WEBPACK
 ***************************************
 **********************************************************
 
+function App() {
+  // const styleApp = { padding: '10px 20px', marginTop : 10}
+  return (
+    //JSX
+    <>
+   
+
+ 
+      <NavBar />
+     
+
+        <ItemListContainer className="cotenedores" greeting="Productos en oferta"/>
+        <ItemListContainer className="cotenedores" greeting="Productos de temporada"/>
+        <ItemListContainer className="cotenedores" greeting="Productos mas comprados"/>
+   
+
+      {/* <Modal title="MODAL DE REGISTRO">
+        <form>
+          <input type="text" />
+          <input type="text" />
+          <input type="text" />
+          <button>enviar</button>
+        </form>
+      </Modal> */}
+
+ 
+
+
+
+
+    </>
+  );
+}
+
+export default App;
+
+
+
 * DESTRUCTURAR EN OBJETOS Y METODOS
 
 const produt ={
@@ -322,6 +360,37 @@ si pongo el [] vacio es solo en montaje
 si no lo pongo es en actualizacion
 
 
+    // aca en useEffect se llama a la api y listo 
+        // fetch().then(
+            // setProduct())
+    // para agregar un producto dsp hacer una actualizacion
+
+    useEffect(()=>{
+        console.log("ejecuto en fase de montage")
+         // fetch().then(
+            // setProduct())
+    }, [])
+
+
+-----------
+
+
+
+//  // aca en useEffect se llama a la api y listo 
+//         // fetch().then(
+//             // setProduct())
+//     // para agregar un producto dsp hacer una actualizacion
+
+//     useEffect(()=>{
+//         console.log("ejecuto en fase de actualizacion")
+//          // fetch().then(
+//             // setProduct())
+//     },[counter, otro])
+// // se ejecuta cada vez que cambie el estado COUNTER
+
+
+
+
 * desmontaje
  useEffect(()=>{
 
@@ -349,23 +418,210 @@ return () =>{
 
 
 
+**********************************************************
+***************************************
+CLASE 6 | promesas | asincronica | map
+***************************************
+**********************************************************
+
+
+* PROMISE: 
+pending
+fullfiled
+rejected
+
+
+* Sincronia, espera el resultado y ejecuta
+
+const task = new Promise((resolve,reject) => {
+  // tarea
+  resolve(true)
+
+});
+
+task.then (result => {
+  console.log(result)
+})
+
+
+
+* LAS PROMESAS SE RESUELVEN CON UN 
+then  =para trabajarlas (cuando va bien)
+catch =para agarrar el error (cuando falla)
+finally =cuando termina (siempre que termina)
+
+
+* ejemplo:
+   
+    const logPromise = new Promise((resolve, reject) => {
+        if (data ===true){
+
+        resolve("La promesa se cumplio correctamente")
+    } else {
+        reject("error")
+    }
+    })
+
+    setSpinner(true)
+
+    logPromise
+    .then ((data) => {
+        console.log(data)
+    })
+    .catch((error)=>{
+        console.log("la llamada fallo")
+    })
+    .finally (()=>{
+        setSpinner(false)
+    })
+
+
+or
+
+ const logPromise = new Promise((resolve, reject) => {
+        if (data ===true){
+
+        resolve("La promesa se cumplio correctamente")
+    } else {
+        reject("error")
+    }
+    })
+
+    setSpinner(true)
+
+    logPromise
+    .then ((res) => {
+      console.log ('Resolved: ' + res)
+    }, err => {
+      console.log ('Rejected: ' + err)
+    })
+    .finally (()=>{
+    console.log ('Finalizado');
+    })
+
+
+* asincronica=
+
+
+
+ const logPromise = () => new Promise((resolve, reject) => {
+  resolve("resuelta")
+      })  
+const getLog = async()=> {
+  try {
+    const responseLog = await logPromise()
+    console.log("funciono!! : " + responseLog)
+  }
+  catch(error){
+    console.log(error)
+
+  }
+}
 
 
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-tarea-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+import * as React from 'react';
+import './style.css';
+
+export default function App() {
+  const arrayP = [
+    { id: 'remera1', name: 'remera ', description: 'remera', stock: '14' },
+    { id: 'boxer', name: 'box ', description: 'bx', stock: '22' },
+  ];
+
+  const logPromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(arrayP);
+    }, 3000);
+  });
+
+  logPromise
+    .then((data) => {
+      // console.log('El array es: ' + data);
+      console.log(data);
+    })
+    .catch((error) => {
+      console.log('la llamada fallo: ' + error);
+    })
+    .finally(() => {
+      console.log('final');
+    });
+
+  return (
+    <div>
+      <h1>PROMISES</h1>
+      <p>Start editing to see some magic happen :)</p>
+    </div>
+  );
+}
+
+
+
+
+* MAP  (solo con ARRAY)
+ nos permite generar un array tomando de baso otro array
+ usando una funcion transformadora
+
+el metodo KEY
+
+ ejemplo: crea un array con los nombre de los usuarios.
+
+ const user = [
+  {
+    nombre: fede, edad:32,curso:react
+  }
+  {
+nombre: pedro, edad : 21, curso: js
+  }
+ ]
+
+console.log(user.map(user => user.nombre))
+// ["fede","pedro"]
+console.log(user.map(user => user.nombre)).(','))
+// ["fede,pedro"]
+
+
+
+
+* utiliza el Key.
+
+
+***************
+ - se utiliza products.mock
+ y despues el back end, reemplaza esa llamada de la 
+ promesa que utiliza el products.mock por la parte back end.
+ ***************
+
+
+    fetch('urslbackend',{})
+    .then ((data) => {
+        console.log("Productos: " + data)
+        setlistProducts(res)
+    })
+    .catch((error)=>{
+        console.log("la llamada fallo" + error)
+    })
+    .finally (()=>{
+        console.log("finally")
+    })
 
 
 
 
 
-
-
-
-
-
-
-
+**********************************************************
+***************************************
+CLASE 7 | 
+***************************************
+**********************************************************
 
 
 

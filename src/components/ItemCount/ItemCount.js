@@ -1,10 +1,9 @@
 import './ItemCount.css'
-import {useState,useEffect} from 'react'
+import {useState} from 'react'
 
 const ItemCount = ({stock,initial, onAdd}) => {
 
     const [counter, setCounter] = useState(initial) 
-    const [otro, setOtro] = useState() 
 
     const addNumber = () => {
         if (stock > counter){
@@ -13,7 +12,7 @@ const ItemCount = ({stock,initial, onAdd}) => {
     
     const removeNumber = () => {
         
-        if(counter>1){
+        if(counter>initial){
             setCounter(counter - 1)
     }}
 

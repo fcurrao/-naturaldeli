@@ -5,13 +5,9 @@ import Modal from './components/Modal/Modal';
 import './App.css'
 
 function App() {
-  // const styleApp = { padding: '10px 20px', marginTop : 10}
   return (
-    //JSX
     <>
    
-
-
 
  
       <NavBar />
