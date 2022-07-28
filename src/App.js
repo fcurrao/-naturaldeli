@@ -1,6 +1,7 @@
 
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import Modal from './components/Modal/Modal';
 import './App.css'
 
@@ -13,9 +14,13 @@ function App() {
       <NavBar />
      
 
-        <ItemListContainer className="cotenedores" greeting="Productos en oferta"/>
-        <ItemListContainer className="cotenedores" greeting="Productos de temporada"/>
-        <ItemListContainer className="cotenedores" greeting="Productos mas comprados"/>
+        <ItemDetailContainer className="cotenedores" secciones="Productos en oferta"/>
+
+
+
+
+        {/* <ItemListContainer className="cotenedores" secciones="Productos de temporada"/>
+        <ItemListContainer className="cotenedores" secciones="Productos mas comprados"/> */}
    
 
       {/* <Modal title="MODAL DE REGISTRO">

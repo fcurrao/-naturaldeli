@@ -25,6 +25,12 @@ CLASE 1 | repaso
  
 * ...array
  
+
+
+ tipo bootstraps:
+
+SWIPERSJS.com 
+
 **********************************************************
 ***************************************
 CLASE 2 | primeros usos REACT 
@@ -619,10 +625,408 @@ console.log(user.map(user => user.nombre)).(','))
 
 **********************************************************
 ***************************************
-CLASE 7 | 
+CLASE 7 | (6) / Consumiendo APIs ( Desafio / Tarea: Detalle de Producto)
 ***************************************
 **********************************************************
 
+
+* API= Aplicacion de servicio de Datos
+* API: parte para el back end.
+* los front end, tienen que unir con back end.
+
+* Cliente (consume) - Servidor (proveedor)
+* Fetch y get.
+
+
+(( pagina para ejemplos: 
+jsonplaceholder.typicode
+))
+
+--------------------------------------------
+POSTMAN
+--------------------------------------------
+* Aplicacion para probar los Apis y POST.
+
+--------------------------------------------
+PUSH NOTIFICATION
+--------------------------------------------
+
+Subscribirse a cuando haya novedades!
+el servidor inicia , el cliente se suscribe
+y desde el server te manda notificacioon al cliente
+(Whatsapp web , notificacion)
+
+
+
+--------------------------------------------
+POLLING
+--------------------------------------------
+
+el cliente todo el dia esta preguntando y actualizando
+
+
+-------------------------------------------
+--------------------------------------------
+REQUEST FOR HTTP/S
+--------------------------------------------
+Consultar al servidor , estableciendo un protocolo de transferencia,
+definido por :
+
+
+url
+verbo(get,post,put,delete + )
+parametro (via query o url)
+headers
+body ( contenido de un POST)
+
+
+(el body es lo que le enviamos a la API, al backend)
+
+-
+
+get: traer los productos de la api
+post: crear informacion y se lo envio a la api
+delete: quiero eliminar
+
+put: modificar, crearo actualizar
+patch: quiero alterar parcialmente
+
+-
+
+--------------------------------------------
+QUERY PARAMS
+--------------------------------------------
+
+* Parametros separados por querys
+
+
+* query = q separadas por &
+* se inicia con ?
+* es la ?Q=busquedaa en el google
+* www.e-comerce.com.ar/search?q=remeras&price=500&size=L
+
+
+
+--------------------------------------------
+URL PARAMS /segmente
+--------------------------------------------
+
+* Parametros separdos por barra , por url
+
+* www.reverpass.com/productos/gorras-de-lana
+
+
+
+--------------------------------------------
+RESTFUL / recursos
+--------------------------------------------
+
+* SE UTILIZA : AJAX
+
+POST /create-user HTTP/1.1
+
+*Header 
+Host: localhost:3000
+conenection: keep-alive
+Content-type: application/json
+................
+
+* body { "name": "john", "age": 35 }
+
+* en un formulario log in, se envia un post en donde el body
+es ´{usuario: fede , contraseña: 1234}
+
+
+* header le podes poner que esta logeado o no.
+- agregan info extra, login, tokens, cookies, formato de texto, otros
+- En consola del chrome, se puede ver la info de Headers.
+
+
+
+--------------------------------------------
+REQUESTS EN EL BROWSER / navegador
+FETCH API
+--------------------------------------------
+
+
+*Utilizar fetch api. -- es una promise  y tiene dos then.
+
+* el primero asigna que es json, y luego el segundo te deja
+usarlo como vos quieras.
+
+
+-fetch(url)
+.then(response{
+return response.json();
+}
+.then function (user){
+console.log(user)
+}
+
+
+(( pagina para ejemplos: 
+jsonplaceholder.typicode
+))
+
+
+fetch('http://jsonplaceholder.typicode.com/user')
+.then((response){
+return response.json()
+})
+.then((data){
+console.log("Usuarios :", data)
+})
+
+
+
+
+
+* CON POST:
+
+APP:
+fetch(('http://jsonplaceholder.typicode.com/user'){
+method: 'POST',
+body: {
+email: "fede",
+password: "1234"
+})
+.then((response){
+return response.json()
+})
+.then((data){
+console.log("Usuarios :", data)
+})
+
+
+-------------------------------------
+-------------------------------------
+-------------------------------------
+-------------------------------------
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+*&&&&&* EJERCICIO *&&&&&*
+
+* Utilizar un Mount effect, y fetch api (api de ML)
+muestre los primeros 10 nombres (Mapearlos)
+
+--
+api de mercadolibre.
+ML
+https://api.mercadolibre.com/sites/MLA/search
+--
+(api pokemon :  https://pokeapi.co/ )
+--
+
+
+
+&&& ENTENDER ESTE EJERCICIO   V V V &&&
+
+
+http://pokeapi.co/api/v2/pokemon
+results: objeto con pokemones 
+
+
+import React, {useState,useEffect} from 'react';
+
+//
+const[listaPokemon, setListPokemon]=useState([])
+
+
+// ((Se hace en el ciclo de vida en el montaje))
+useEffect(()=>{
+
+fetch('http://pokeapi.co/api/v2/pokemon?offset=10&limit=10')
+.then((response){
+return response.json()
+})
+.then((data){
+console.log( "Los 10 pokemones son :", data.results)
+// le asigno a ListaPokemon , lo que traje de la api: (en la api es 'results')
+setListaPokemon (data.results)
+})
+},[]);
+
+
+return(
+<>
+<h1>Pokemones :  <h1/>
+// hago un mapeo del array de la lista y por cada uno le muestro el nombre
+{listaPokemon.map((pokemones, i)) => {
+return <p key={i}> pokemones.name</p>}
+}
+
+
+
+</>
+)
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+EJEMPLO DE POST:  ((Log In) 
+
+APP:
+
+// uso un ONSUBMIT o  unUSEEFFECT , para lanzar el POST.
+const onSubmit =() => {
+useEffect(() => {
+
+
+fetch(('http://challenge-react.alkemy.org',
+{
+method: 'POST',
+headers: {
+'Content-Type': 'application/json',
+'Acces-Control-Allow-Origin': '*'
+}
+body: JSON.stringify({
+"email": mail,
+"password": password
+})
+})
+.then((response){
+return response.json()
+})
+.then((data){
+console.log("Usuario Cargado :", data)
+})
+
+
+
+
+return(
+<>
+<button onClick=onSubmit() > ENVIAR POST </button>
+
+
+</>
+)
+
+////////////
+// en el body  puede ir LOGIN o tambien Nuevos productos.
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+OTRO EJEMPLO:
+
+MERCADO PAGO. API DE PAGO!
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+
+
+-------------------------------------
+CORS 
+-------------------------------------
+
+* No me permite el acceso con este dominio a la api
+entonces tengo que admitir cors.
+
+* En le header va los preflight.:
+
+(todos)
+Acces-Control-Allow-Origin:*
+(algunas)
+Acces-Control-Allow-Origin:https://localhosto:3000
+
+
+
+
+//////////////////////////////////////////////
+*///* TAREA *///*
+
+-- Detalle del producto -
+Crear hook de 1 producto:
+
+ItemDetailContainer en la premisa ItemListContainer
+ItemDetail
+
+-----
+comentar el itemlistcontainer
+
+
+//////////////
+tipo bootstraps:
+
+SWIPERSJS.com 
+
+//////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+<
+
+MODIFICADO POR PROFE:
+
+
+fetch('http://jsonplaceholder.typicode.com/user'){
+.then((response){
+return response.json()
+})
+.then((data){
+console.log("Usuarios :", data)
+})
+
+
+
+
+
+APP:
+fetch('http://jsonplaceholder.typicode.com/user'){
+method: 'POST',
+body: {
+email: "fede",
+password: "1234"
+})
+.then((response){
+return response.json()
+})
+.then((data){
+console.log("Usuarios :", data)
+})
+
+
+
+
+
+
+**********************************************************
+***************************************
+CLASE 8 | 
+***************************************
+**********************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<
 
 
 

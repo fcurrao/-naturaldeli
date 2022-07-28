@@ -1,16 +1,16 @@
-import ItemProduct from "../ItemProduct/ItemProduct"
+// import ItemProduct from "../ItemProduct/ItemProduct"
 
 
-const ItemList = ({dataProducts}) => {
-return (
-<>
-{dataProducts.map((product)=> {
-return <ItemProduct key={product.id} data={product}/>
-})}       
+// const ItemList = ({dataProducts}) => {
+// return (
+// <>
+// {dataProducts.map((product)=> {
+// return <ItemProduct key={product.id} data={product}/>
+// })}       
 
 
-</>
-)
-}
+// </>
+// )
+// }
 
-export default ItemList
+// export default ItemList

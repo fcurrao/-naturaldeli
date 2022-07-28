@@ -1,17 +1,26 @@
 
 
 .item-product {
-    float: left;
-    width: 200px;
-    box-shadow: 1px 1px 5px #afafaf47;
-    border: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin-right: 10px;
-   
-}
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-content: center;
+        justify-content: center;
+        align-items: flex-start !important;
+        width: max-content !important;
+        /* background-color: beige !important; */
+        float: left;
+        box-shadow: 4px 4px 50px #23232347;
+        border: 10px;   
+        text-align: center;
+        position: relative;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        padding-bottom: 8px;
+        zoom: 90%;
+          width: 600px !important;
+    }
+
 
 .items{
     color: red;
@@ -119,10 +128,70 @@
 .btn:not(:disabled):not(.disabled) {
     cursor: pointer;
     border: beige;
-    background-color: #9d9d06;
+    color: white;
+    background-color:darkcyan;
 }
 
 .btn-group2{
     padding: 0.2rem;
     margin-bottom: 0.3rem;
 }
+
+.btn2{
+    cursor: auto !important;
+   background-color: yellowgreen !important;
+}
+
+.red{
+    font-size: 14px;
+
+    font-family: 'Courier New', Courier, monospace;
+        color: red !important;
+    /* background-color: red !important; */
+
+}
+
+
+.description2{
+     font-family:Georgia, 'Times New Roman', Times, serif;
+     color: grey;
+}
+
+
+.chiquito1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 10px;
+    color: grey;
+}
+
+
+
+
+
+
+
+
+.item-product2{
+    display: flex !important;
+    align-items: center !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    align-content: center;
+    justify-content: center;
+    /* align-items: flex-start !important; */
+    /* width: max-content !important; */
+    /* background-color: beige !important; */
+    /* float: left; */
+    /* box-shadow: 1px 1px 5px #46464647; */
+    border: 10px;
+    text-align: center;
+    position: relative;
+    margin-right: 10px;
+    /* margin-bottom: 10px; */
+    padding-top: 8px;
+    zoom: 90%;
+    width: 600px !important;
+    height: 370px;
+}
+
+
