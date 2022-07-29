@@ -1,21 +1,61 @@
 
+
+import {useParams} from 'react-router-dom'
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import Modal from './components/Modal/Modal';
 import './App.css'
+import Home from './pages/Home';
+import Contact from './pages/Contact';
+import About from './pages/About';
+import Detail from './pages/Detail';
+
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
+    <div className="colorFondo">
    
 
- 
+    
+
       <NavBar />
-     
+      <Routes> 
+        <Route path="/" element ={<Home/>} />
+         <Route path="/contact"  element ={<Contact/>} />
+          <Route path="/about"  element ={<About />} />
+   
+          <Route path="/productos/:id"  element ={<Detail/>} />
+          {/* <Route path="/:categorias/:id"  element ={<Detail/>} /> */}
+          <Route path="*" element={<h1>ERROR 404 - PAGINA NO ENCONTRADA</h1>}/>
+      </Routes>
+      
+        
+       
+        
 
-        <ItemDetailContainer className="cotenedores" secciones="Productos en oferta"/>
 
+      {/* <footer> FOOTER</footer> */}
+</div>
+
+</BrowserRouter>
+  );
+}
+
+export default App;
+
+
+
+
+
+
+
+        
+        
+        
+        {/* <ItemDetailContainer className="cotenedores" secciones="Productos Congelados" /> */}
 
 
 
@@ -33,13 +73,3 @@ function App() {
       </Modal> */}
 
  
-
-
-
-
-    </>
-  );
-}
-
-export default App;
-

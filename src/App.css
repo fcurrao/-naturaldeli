@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: beige !important;
 }
 
 .App-logo {
@@ -41,4 +42,11 @@
 .cotenedores {
   float: initial !important;
   padding-right: 20% !important;
+  background-color: beige !important;
+}
+
+
+.colorFondo{
+  background-color: beige !important;
+
 }

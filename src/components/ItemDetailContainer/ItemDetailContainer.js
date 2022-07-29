@@ -1,82 +1,49 @@
 
+    import {useEffect, useState} from 'react'
+    import ItemList from "../ItemList/ItemList"
+    import ItemProduct from "../ItemProduct/ItemProduct"
+    import '../ItemListContainer/ItemListContainer.css'
+    import products from "../../utils/product.mock"
+    import {useParams} from 'react-router-dom'
+    import ItemDetail from  "../ItemDetail/ItemDetail"
 
-import {useEffect, useState} from 'react'
-import ItemList from "../ItemList/ItemList"
-import products from "../../utils/product.mock"
-import ItemDetail from '../ItemDetail/ItemDetail' 
+const ItemDetailContainer = ({}) => {
 
-
-
-const ItemDetailContainer = ({secciones}) => {
-
+    const {id, categorias} = useParams()
+    const [productData, setProductData] = useState([])
     
+useEffect(()=>{
+    filterById()
+},[])
+
+
+const filterById = () =>{
+
+    // filter o some
+    products.some( (product)=>{
+    if(product.id == id)   {
         
-        // Implementar mock invocando a getItem() y utilizando el resolver then
-        //  return /* JSX que devuelva un ItemDetail (punto 2) */
-    
-
-
-         
-    const [listProducts, setlistProducts] = useState([])
-
-    const getItem = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(products)         
-        }, 2000);
-    
+        setProductData(product)
+      
+        // guardarlo en un state para usarlo en JSX
+    } 
     })
-    
-    
-
-
-
-    // se trae los productos , solo en el montaje nomas.
-    useEffect(()=>{
-    
-        getItem
-        .then ((data) => {
-            console.log("Productos: ")
-            console.log(data)
-            setlistProducts(data)
-        })
-        .catch((error)=>{
-            console.log("la llamada fallo" + error)
-        })
-        .finally ((data)=>{
-    
-            console.log("finally")
-        })
-    
-    },[])
-
- 
+}
 
 
 
 
-     
     return(
-        <>
-        <div className='conteinerStyling'>
-            
-        <h2 className='minimoContenido'>{secciones}</h2>
-
-        {listProducts.map((product)=> {
-        return <ItemDetail key={product.id} baseProducto={product}/>  
         
-        
-        })}   
-
-
-         </div>
+    <div>
+          
+    <ItemDetail data={productData}/>
+          {/* <ItemProduct key={itemDetails[0].id}  data={itemDetails[0]}/> */}
+      
     
-        </>
+         </div>
+        
     )
-    }
-
+}
 
 export default ItemDetailContainer
-
-
-
-

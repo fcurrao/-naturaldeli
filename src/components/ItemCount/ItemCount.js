@@ -25,9 +25,9 @@ return(
 
     
  <div className='countProd'>
- <button onClick={removeNumber}>-</button>
+ <button className="btn btn-group2" onClick={removeNumber}>- </button>
      <p>{counter}</p>
-     <button onClick={addNumber} >+</button>
+     <button className="btn btn-group2" onClick={addNumber} >+</button>
  </div>
 
 

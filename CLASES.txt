@@ -1004,12 +1004,58 @@ console.log("Usuarios :", data)
 
 **********************************************************
 ***************************************
-CLASE 8 | 
+CLASE 8 | ROUTING y NAVEGACION  ()
 ***************************************
 **********************************************************
 
 
 
+* ORGANIZACION =
+
+-HOME
+-(BUSQUEDA DE USUARIO)>MIRANDO
+-DETALLE
+-CONFIRMACION
+-FIN (COMPRA O CIERRA)
+
+
+-------------------------------------
+* ROUTING ::
+-------------------------------------
+
+para las  /    ( barras)
+
+INSTALAR NPM INSTALL react-router-dom
+
+-------------------------------------
+* REACT ROUTER ::
+-------------------------------------
+
+<BrowserRouter>
+toda la JSX
+</BrowserRouter>
+
+para que toda nuestra APP se maneje con routers
+
+-----------------
+
+<Routers>
+<Router>
+
+</Routers>
+
+-----------------
+
+
+<Link>
+
+----------
+
+APRENDIMOS TODO ESTO.
+
+import { Link} from 'react-router-dom'
+import {useParams} from 'react-router-dom'
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 
 
@@ -1019,6 +1065,15 @@ CLASE 8 |
 
 
 
+
+
+
+
+**********************************************************
+***************************************
+CLASE 9 | 
+***************************************
+**********************************************************
 
 
 
