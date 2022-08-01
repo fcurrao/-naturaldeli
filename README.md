@@ -9,7 +9,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 This is the site of a small local market. Where do they sell healthy products?
 
 It is a page made with REACT and JS technology.
-On the page you can see the products, filtered by offer, price, categories, their prices.
+
+On the page you can see the products, filtered by offer, price, categories, their prices.\
 And clearly you will be able to buy them.
 Made with Apis and backEnd-mock.
 On the page you can log in to save your carts.
