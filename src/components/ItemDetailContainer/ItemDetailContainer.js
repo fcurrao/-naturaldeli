@@ -9,7 +9,7 @@
 
 const ItemDetailContainer = ({}) => {
 
-    const {id, categorias} = useParams()
+    const {id} = useParams()
     const [productData, setProductData] = useState([])
     
 useEffect(()=>{
@@ -24,21 +24,16 @@ const filterById = () =>{
     if(product.id == id)   {
         
         setProductData(product)
-      
-        // guardarlo en un state para usarlo en JSX
+       
     } 
     })
 }
-
-
-
 
     return(
         
     <div>
           
-    <ItemDetail data={productData}/>
-          {/* <ItemProduct key={itemDetails[0].id}  data={itemDetails[0]}/> */}
+    <ItemDetail data={productData}/> 
       
     
          </div>

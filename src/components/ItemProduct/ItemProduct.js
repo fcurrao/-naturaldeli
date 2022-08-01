@@ -43,7 +43,7 @@ const en12cuotas = en12cuotasSub.toFixed(2);
         <div>
        {/* <Detail data={productData} /> */}
        <div className="item-product">
-        <img src={`./assets/${image}`} alt="Imagen producto" />
+        <img src={`../assets/img/${image}`} alt="Imagen producto" />
         <div  className="item-product2" >
         <span className="chiquito1 badge badge-warning">{category}</span>
         <p className='chiquito1'>Producto Organico</p>

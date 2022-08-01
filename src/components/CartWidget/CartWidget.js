@@ -4,6 +4,7 @@ import './CartWidget.css'
 
 
 const  CartWidget = () =>  {
+    // TOTAL  tiene que ser un parametro que me lo pase la pagina...
     const total=2;
     return (
         // fragment

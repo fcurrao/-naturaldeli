@@ -9,15 +9,19 @@
 
 const ItemListContainer = ({secciones}) => {
 
-
+    const {categoryid} = useParams()
     const [listProducts, setlistProducts] = useState([])
-
-    
-         
+    const filterByCategory = products.filter((product) => product.category == categoryid)
 
     const getItem = new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(products)         
+            if (categoryid === 'Almacen' || categoryid === 'Congelados' || categoryid === 'Dulces' || categoryid === 'Frescos' ){
+            resolve(filterByCategory) 
+        
+            }
+              else{
+            resolve (products)
+          }
         }, 2000);
     
     })
@@ -44,7 +48,7 @@ const ItemListContainer = ({secciones}) => {
 
 
         
-    },[])
+    },[categoryid] )
 
 
   
@@ -55,8 +59,8 @@ const ItemListContainer = ({secciones}) => {
         <>
         <div className='conteinerStyling'>
         <h2 className='minimoContenido'>{secciones}</h2> 
-
- <ItemList   listProducts={listProducts}/> 
+        <h3 className='minimoContenido'>{categoryid}</h3> 
+        <ItemList listProducts={listProducts}/> 
 
     
          </div>

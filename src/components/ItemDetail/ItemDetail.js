@@ -27,12 +27,12 @@ const onSubmitDetalle = () => {
 return (
     <div className="item-product-zoom">
         <div className='fotitos'>
-        <img src={`/assets/${image}`} alt="Imagen producto" />
-        <img src={`/assets/${image}`} alt="Imagen producto" />
-        <img src={`/assets/${image}`} alt="Imagen producto" />
+        <img src={`../assets/img/${image}`} alt="Imagen producto" />
+        <img src={`../assets/img/${image}`} alt="Imagen producto" />
+        <img src={`../assets/img/${image}`} alt="Imagen producto" />
         </div>
         <div className="item-product2">
-    <img src={`/assets/${image}`} alt="Imagen producto" />
+    <img src={`../assets/img/${image}`} alt="Imagen producto" />
     </div>
     <div className="item-product3">
         <div  className="item-product2" >
@@ -42,15 +42,16 @@ return (
         <p className='description2'>{description}</p>
         <span className="btn2 btn btn-primary">$ {price}</span><br></br>
         <p className='red' >pagalo en 12 cuotas de {en12cuotas}</p>
-        <Link to={`/productos/${id}`}>
-        <button className="btn btn-group2" onClick={onSubmitDetalle}>Detalle Producto</button>
-        </Link>
+     
         </div>
     <div className="item-product2">
 <span className="badge badge-danger">RECOMENDADO</span>
 <ItemCount stock={stock} initial={1} />
-<p className='chiquito1'>stock disponible: {stock}</p>           
+<p className='chiquito1'>stock disponible: {stock}</p>      
+{/* <Link to={`/productos/${id}`}> */}
+    
 <button className="btn btn-group" onClick={onSubmitComprar}>Comprar</button>
+     {/* </Link>      */}
 </div>    
 </div>
 </div>

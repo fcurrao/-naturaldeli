@@ -32,14 +32,15 @@ const NavBar = () =>  {
       <Link to="/"   className="nav-link" href="index.html">Descuento</Link>
       </li>   
       <li className="nav-item dropdown">
-      <Link to="/"   className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Categorias
-        </Link>
+       
+      <a   className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Categorias 
+        </a> 
         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-        <Link to="/"   className="dropdown-item" href="#">Almacen</Link>
-        <Link to="/"   className="dropdown-item" href="#">Congelados</Link>
-          <Link to="/"   className="dropdown-item" href="#">Frescos</Link>
-          <Link to="/"   className="dropdown-item" href="#">Dulces</Link>
+        <Link to="/categorias/Almacen"   className="dropdown-item" href="#">Almacen</Link>
+        <Link to="/categorias/Congelados"   className="dropdown-item" href="#">Congelados</Link>
+          <Link to="/categorias/Frescos"  className="dropdown-item" href="#">Frescos</Link>
+          <Link to="/categorias/Dulces"  className="dropdown-item" href="#">Dulces</Link>
           <div className="dropdown-divider"></div>
           <Link to="/"  className="dropdown-item" href="#">Nuevos Productos</Link>
         </div>

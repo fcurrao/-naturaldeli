@@ -6,7 +6,7 @@ description: "Arroz integral yamani",
 category: "Almacen",
 filtradito: "oferta",
 price: 150,
-image: './img/ARROZ.jpg',
+image: 'ARROZ.jpg',
 stock: 8
 },
 {
@@ -16,7 +16,7 @@ description: "Yerba porongo",
 category: "Almacen",
 filtradito: "oferta",
 price: 1200,
-image: './img/YERBA.jpg',
+image: 'YERBA.jpg',
 stock: 12
 },
 {
@@ -26,7 +26,7 @@ description: "Choclo congelado",
 category: "Congelados",
 filtradito: "oferta",
 price: 460,
-image: './img/CHOCLO.jpg',
+image: 'CHOCLO.jpg',
 stock: 44
 },
 {
@@ -36,7 +36,7 @@ description: "Fideos de masa integral",
 category: "Almacen",
 filtradito: "oferta",
 price: 421,
-image: './img/FIDEOS.jpg',
+image: 'FIDEOS.jpg',
 stock: 54
 },
 {
@@ -46,9 +46,76 @@ description: "Mayonesa light",
 category: "Almacen",
 filtradito: "oferta",
 price: 560,
-image: './img/MAYONESA.jpg',
+image: 'MAYONESA.jpg',
+stock: 33
+},
+{
+id: 6,
+title: "Hamburguesas Pollo",
+description: "Hamburguesas de Pollo congueladas",
+category: "Congelados",
+filtradito: "oferta",
+price: 1530,
+image: 'HAMBURGESA DE POLLO.jpg',
+stock: 33
+},
+{
+id: 7,
+title: "Galletas de agua",
+description: "Crackers galletas de agua",
+category: "Almacen",
+filtradito: "oferta",
+price: 220,
+image: 'GALLETAS DE AGUA.jpg',
+stock: 33
+},
+{
+id: 8,
+title: "Galletas de Garbanzo",
+description: "Galletas de harina de garbanzo",
+category: "Almacen",
+filtradito: "oferta",
+price: 400,
+image: 'GALLETAS DE GARBANZO.jpg',
+stock: 33
+},{
+id: 9,
+title: "Sal Rosa",
+description: "Sal del himalaya rosa",
+category: "Almacen",
+filtradito: "oferta",
+price: 560,
+image: 'SAL ROSA.jpg',
+stock: 33
+},{
+id: 10,
+title: "Alfajor",
+description: "Sal del himalaya rosa",
+category: "Dulces",
+filtradito: "oferta",
+price: 160,
+image: 'ALFAJOR.jpg',
+stock: 33
+},{
+id: 11,
+title: "Jugo Manzana",
+description: "Jugo de Manzana",
+category: "Frescos",
+filtradito: "oferta",
+price: 560,
+image: 'JUGO1.jpg',
+stock: 33
+},{
+id: 12,
+title: "Jugo Frutilla",
+description: "Jugo de frutilla",
+category: "Frescos",
+filtradito: "oferta",
+price: 560,
+image: 'JUGO2.jpg',
 stock: 33
 }
+
 
 ]
 
