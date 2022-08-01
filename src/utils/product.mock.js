@@ -95,7 +95,7 @@ category: "Dulces",
 filtradito: "oferta",
 price: 160,
 image: 'ALFAJOR.jpg',
-stock: 33
+stock: 14
 },{
 id: 11,
 title: "Jugo Manzana",
@@ -104,7 +104,7 @@ category: "Frescos",
 filtradito: "oferta",
 price: 560,
 image: 'JUGO1.jpg',
-stock: 33
+stock: 27
 },{
 id: 12,
 title: "Jugo Frutilla",
@@ -113,7 +113,7 @@ category: "Frescos",
 filtradito: "oferta",
 price: 560,
 image: 'JUGO2.jpg',
-stock: 33
+stock: 30
 }
 
 
