@@ -34,17 +34,16 @@ return (
         <div className="item-product2">
     <img src={`../assets/img/${image}`} alt="Imagen producto" />
     </div>
-    <div className="item-product3">
-        <div  className="item-product2" >
+    <div className="item-product3 ">
+        <div  className="item-product2 " >
         <span className="chiquito1 badge badge-warning">{category}</span>
         <p className='chiquito1'>Producto Organico</p>
         <h1>{title}</h1>
-        <p className='description2'>{description}</p>
+        <p className='description2 esp esp2' >{description}</p>
         <span className="btn2 btn btn-primary">$ {price}</span><br></br>
         <p className='red' >pagalo en 12 cuotas de {en12cuotas}</p>
-     
         </div>
-    <div className="item-product2">
+    <div className="item-product2 esp">
 <span className="badge badge-danger">RECOMENDADO</span>
 <ItemCount stock={stock} initial={1} />
 <p className='chiquito1'>stock disponible: {stock}</p>      

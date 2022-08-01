@@ -114,7 +114,7 @@ filtradito: "oferta",
 price: 560,
 image: 'JUGO2.jpg',
 stock: 30
-}
+}  
 ]
 
 export default products
