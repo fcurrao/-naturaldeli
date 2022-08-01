@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/-naturaldeli/static/css/main.aa727f22.css",
+    "main.js": "/-naturaldeli/static/js/main.0d13f184.js",
+    "index.html": "/-naturaldeli/index.html",
+    "main.aa727f22.css.map": "/-naturaldeli/static/css/main.aa727f22.css.map",
+    "main.0d13f184.js.map": "/-naturaldeli/static/js/main.0d13f184.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aa727f22.css",
+    "static/js/main.0d13f184.js"
+  ]
+}
