@@ -15,10 +15,21 @@
 
   
 
-.btnx{
+.btnx2{
     width: 220px !important;
-    font-size: 18px;
+    font-size: 26px;
     background-color: darkcyan !important;  
+    display: revert;
+    cursor: pointer;
+    border: beige;
+    color: white;
+    background-color: darkcyan; 
+    cursor: pointer;
+    padding: 1px;
+    font-size: 28px;
+    width: 25px;
+    height: 45px; 
+
 }
 
 .item-product-zoom img{

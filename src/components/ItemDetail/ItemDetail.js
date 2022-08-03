@@ -52,7 +52,7 @@ const ItemDetail = ({ data }) => {
                        {console.log("quantitiSelected", quantitiSelected)}
                             <h4>Selecciono :  {quantitiSelected} unidades</h4>
                        <Link to={`/cart`}> 
-                            <button className="btn btn-group btnx" onClick={onSubmitComprar}>Terminar Compra</button> 
+                            <button className="btn btn-group btnx2" onClick={onSubmitComprar}>Terminar Compra</button> 
                         </Link>     
                        </>                           
                             : 
