@@ -17,6 +17,18 @@
       justify-content: center;
     }
 
+.roww{
+  display: flex;
+flex-direction: row;
+}
 
+.columnn{
+  display: flex;
+  flex-direction: column;
+  }
+  
 
-
+  .btnx{
+    width: 220px !important;
+    font-size: 18px;
+  }

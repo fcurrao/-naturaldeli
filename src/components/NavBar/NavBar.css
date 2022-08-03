@@ -4,3 +4,18 @@
     margin-right: 10px;
 
 }
+
+.lgrande{
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+color:darkslategrey;
+}
+
+.letritas{
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+color: #d94d5a !important;
+}
+
+.zoomsito{
+    zoom: 75%;
+    color: #d94d5a !important;
+}

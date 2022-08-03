@@ -1,0 +1,65 @@
+
+.centrado{
+    text-align: center;
+    padding-top: 30px;
+}
+
+.centrado img{
+ width: 80%;
+}
+
+.titulo{
+    text-decoration: overline;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration-color: rgb(132, 131, 131);
+    color: rgb(132, 131, 131);
+}
+
+.fondo{
+  background-image: url("/public/assets/img/tiendadeli.jpg");
+  background-size: cover;
+  width: 90%;
+  height: 500px; 
+}
+
+.colorblanco{
+    background-color: white;
+    color: white;
+}
+.colornegro{
+    background-color: black;
+    color: black;
+}
+
+.padding{
+padding-left: 10%;
+}
+
+.pointer{
+    cursor: pointer;
+    opacity: 10 !important;
+
+}
+
+
+.next{
+    padding-right: 180px;
+    opacity: 10 !important;
+    color: white;
+
+}
+
+.prev{
+    padding-left: 180px;
+    opacity: 10 !important;
+        color: white;
+}
+
+
+.letrasGaleria{
+    box-sizing: border-box;
+    text-decoration: solid;
+    font-weight: 900;
+    opacity: 10 !important;
+        color: white;
+}

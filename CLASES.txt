@@ -1071,11 +1071,241 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 **********************************************************
 ***************************************
-CLASE 9 | 
+CLASE 9 |  EVENTOS 
 ***************************************
 **********************************************************
 
+ * DOM EVENT
 
+ * EVENT listener
+
+ * Eventos
+
+-------------------------------------
+
+
+-------------------------------------
+DOM EVENT
+-------------------------------------
+
+click
+input
+focus
+whell
+keyboard
+
+* SON LOS MAS USADOS !!!!!!!!!!!
+
+
+-------------------------------------
+ON 
+-------------------------------------
+
+* PAGINA CON TODOS:
+
+https://www.gruponw.com/noticias-de-colombia-y-el-mundo/nwarticle/171/13/DOM:+Modelo+basico+de+eventos+-+onblur+-++onchange+-+onclick+ondblclick++onfocus++onkeydown+onkeypre
+
+
+onClick
+onChange
+ondblclick
+onKeyDown
+onfocus
+onmousemove
+onmouseover
+
+
+
+-------------------------------------
+EVENT listener (window)
+-------------------------------------
+
+
+window.addEventListener('resize', onResize);
+
+(nombre de evento , funcion a realizar)
+
+* Hay que return (para desmontar) porque queda corriendo
+
+return()=>{
+  console.log('on dismount')
+  window.removeEventListener('resize', onResize)
+}
+
+* se usa en el effect y se poner la remove en el return del efecto.
+
+
+
+-------------------------------------
+REACT EVENT 
+-------------------------------------
+
+* synthetic events:
+sirve para estandarizar eventos entre Browser
+se destruyen al terminar la utilizacion.
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+EJERCICIO 
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+import * as React from 'react';
+import { useState } from 'react';
+import './style.css';
+
+export default function App() {
+  const [inputValue, setInputValue] = useState('');
+  const handleClick = (e) => {
+    console.log('clickkk', inputValue);
+  };
+
+  const handleChange = (e) => {
+    // Guardo el valor
+    console.log('cambio', e.target.value);
+    setInputValue(e.target.value);
+    // forma de ver
+    // console.log('evento sintetico', e);
+    // console.log('evento nativo', e.nativeEvent);
+  };
+  return (
+    <div>
+      <button onClick={handleClick}> Click </button>
+      <input
+        onChange={handleChange}
+        type="text"
+        placeholder="Ingrese un texto"
+      />
+    </div>
+  );
+}
+
+
+// CONSOLA MUESTRA:
+
+// cambio f
+// cambio fe
+// cambio fed
+// cambio fede
+// clickkk fede
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+-------------------------------------
+* stopPropagation()
+ 
+ stop propagation
+sirve para parar la propagacion de los eventos del padre al hijo
+EJ: toda la card va al link de detalle, pero el boton dentro
+de la card (añadir a carro) / deberia parar la propagacion y ir 
+al link de añadir al carro.
+
+
+
+
+
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+EJERCICIO
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+QUE NO SE PUEDA ESCRIBIR LETRAS VOCALES ::
+
+
+import * as React from 'react';
+import { useState } from 'react';
+import './style.css';
+
+export default function App() {
+  const [inputValue, setInputValue] = useState('');
+  const array = [65, 69, 73, 79, 85];
+  const handleClick = (e) => {
+    console.log('clickkk', inputValue);
+  };
+
+  const handleChange = (e) => {
+    // Guardo el valor
+    console.log('cambio', e.target.value);
+    setInputValue(e.target.value);
+    // forma de ver
+    // console.log('evento sintetico', e);
+    // console.log('evento nativo', e.nativeEvent);
+  };
+
+  const keyfunction = (e) => {
+    if (array.includes(e.keyCode)) {
+      e.preventDefault();
+    }
+  };
+
+  return (
+    <div>
+      <button onClick={handleClick}> Click </button>
+      <input
+        onChange={handleChange}
+        type="text"
+        placeholder="Ingrese un texto"
+        onKeyDown={keyfunction}
+      />
+    </div>
+  );
+}
+
+// CONSOLA MUESTRA:
+
+// cambio f
+// cambio fe
+// cambio fed
+// cambio fede
+// clickkk fede
+
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+MAS RESUMIDO, UTILIZANDO UN INDEX! , 
+
+import React from 'react';
+import './style.css';
+
+export default function App() {
+  const handleKeyDown = (e) => {
+    // cada una que entro es letter
+    const letter = e.key;
+    // si esa letra esta entre las vocales, indexOF devuelve 1,
+    // si no esta devuelve -1 ,  y si es diferente a -1 entra a preventDefault, y no se inputea.
+    if ('aeiouAEIOU'.indexOf(letter) != -1) {
+      e.preventDefault();
+    }
+  };
+
+  return (
+    <div>
+      <p>No ingreses vocales!</p>
+      <input onKeyDown={handleKeyDown} />
+    </div>
+  );
+}
+
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+
+
+-------------------------------------
+* unidirectional
+
+Reaccion (info y data)
+Se pasan Datos de arriba , hacia abajo
+
+
+Acciones (eventos)
+Se pasa la info de hijos a Padres , gracias a eventos.
+
+
+-------------------------------------
+* Intercambiabilidad
 
 
 

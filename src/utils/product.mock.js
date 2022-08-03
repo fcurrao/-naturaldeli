@@ -90,7 +90,7 @@ stock: 33
 },{
 id: 10,
 title: "Alfajor",
-description: "Sal del himalaya rosa",
+description: "Alfajor de chocolate",
 category: "Dulces",
 filtradito: "oferta",
 price: 160,
