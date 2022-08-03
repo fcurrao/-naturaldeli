@@ -48,10 +48,10 @@ const ItemProduct = ({ data }) => {
                         <h1>{title}</h1>
                         <p className='description2'>{description}</p>
                         <span className="btn2 btn btn-primary">$ {price}</span><br></br>
-                        <p className='red' >pagalo en 12 cuotas de {en12cuotas}</p>
+                        <p className='red' > 12 cuotas de {en12cuotas}</p>
 
                         <div>
-                            <button className="btn btn-group2" onClick={onSubmitDetalle}>Detalle Producto</button>
+                            <button className="btn btn-group2 bttn" onClick={onSubmitDetalle}>Detalle Producto</button>
                         </div>
                     </div>
                 </div>

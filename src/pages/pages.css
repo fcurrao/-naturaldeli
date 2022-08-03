@@ -15,6 +15,13 @@
     color: rgb(132, 131, 131);
 }
 
+.titulo2{
+    text-decoration:underline;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration-color: rgb(132, 131, 131);
+    color: rgb(132, 131, 131);
+}
+
 .fondo{
   background-image: url("/public/assets/img/tiendadeli.jpg");
   background-size: cover;

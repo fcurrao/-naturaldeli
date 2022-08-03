@@ -1,14 +1,18 @@
 .conteinerStyling {
     background-color: rgb(246, 241, 241);
     box-shadow: 1px 1px black;
-    height: 1200px;
+    height: 2000px;
     width: 100%;
     border: solid black;
     zoom: 90%;
-    padding: 20px;
+    padding: 1px, 20px, 20px, 20px;
 }
 
 
+.centrado{
+    padding: 30px, 20px, 20px, 20px;
+    text-align: center;
+}
 .minimoContenido {
     width: 100%;
     float: left;

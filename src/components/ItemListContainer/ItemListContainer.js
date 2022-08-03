@@ -58,8 +58,9 @@ const ItemListContainer = ({ secciones }) => {
     return (
         <>
             <div className='conteinerStyling centrado '>
-                <h2 className='minimoContenido titulo centrado'>{secciones}</h2>
-                <h3 className='minimoContenido'>{categoryid}</h3>
+              
+                <h1 className='minimoContenido titulo'>{secciones}</h1>
+                <h1 className='minimoContenido titulo2'>{categoryid}</h1>
                 <ItemList listProducts={listProducts} />
 
 

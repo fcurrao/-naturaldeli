@@ -28,6 +28,12 @@ flex-direction: row;
   }
   
 
+  .bttn{
+    background-color: black !important;
+    border-radius: 0rem !important;
+    font-size: 20px;
+}
+
   .btnx{
     width: 220px !important;
     font-size: 18px;

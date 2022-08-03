@@ -28,7 +28,7 @@ return(
      </div>
      <div className='roww'>
 
-     <button className="btn btn-group btnx" onClick={onAdd} >Agregar al carro</button>
+     <button className="btn btn-group btnx bttn" onClick={onAdd} >Agregar al carro</button>
      </div>
 
 
