@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 ## Description
-This is the site of a small local market. Where do they sell healthy products?
+This is the site of a small local market. Where they sell healthy products.
 
 It is a page made with REACT and JS technology.
 
