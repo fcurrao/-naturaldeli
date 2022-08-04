@@ -26,6 +26,10 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/-naturaldeli/" element={<Home />} />
+
+           
+
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/descuento" element={<Descuento />} />
