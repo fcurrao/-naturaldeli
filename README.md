@@ -8,7 +8,10 @@ This project was bootstrapped with [Create React App]
 ## Previews:
 ![1](https://user-images.githubusercontent.com/68132577/182894870-611ba116-0154-470a-aaf8-74ba310e3cd9.jpg)
 
-##.........................................
+........................................................................................
+........................................................................................
+
+
 ![2](https://user-images.githubusercontent.com/68132577/182894889-a68f7b88-bfd3-4947-8f20-3173818f83cb.jpg)
 
 ## Description
