@@ -3,6 +3,7 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![PRIMERA-ENTREGA-federico-Currao gif](https://user-images.githubusercontent.com/68132577/182894280-071d397f-b203-45a5-9265-4085eec619cc.gif)
 
 
 ## Description
