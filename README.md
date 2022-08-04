@@ -8,6 +8,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Description
 This is the site of a small local market. Where they sell healthy products.
 
+![image](https://github.com/fcurrao/-naturaldeli/blob/main/PRIMERA-ENTREGA-federico-Currao.gif.gif)
+
+![image](https://github.com/fcurrao/-naturaldeli/blob/main/public/assets/img/tiendadeli.jpg)
+
 It is a page made with REACT and JS technology.
 
 On the page you can see the products, filtered by offer, price, categories, their prices.\
