@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/-naturaldeli/static/css/main.e328aa6c.css",
-    "main.js": "/-naturaldeli/static/js/main.9e2a0207.js",
+    "main.js": "/-naturaldeli/static/js/main.99c6970f.js",
     "static/media/tiendadeli.jpg": "/-naturaldeli/static/media/tiendadeli.59459e39e533777ec7f4.jpg",
     "index.html": "/-naturaldeli/index.html",
     "main.e328aa6c.css.map": "/-naturaldeli/static/css/main.e328aa6c.css.map",
-    "main.9e2a0207.js.map": "/-naturaldeli/static/js/main.9e2a0207.js.map"
+    "main.99c6970f.js.map": "/-naturaldeli/static/js/main.99c6970f.js.map"
   },
   "entrypoints": [
     "static/css/main.e328aa6c.css",
-    "static/js/main.9e2a0207.js"
+    "static/js/main.99c6970f.js"
   ]
 }
