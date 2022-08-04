@@ -9,6 +9,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 This is the site of a small local market. Where they sell healthy products.
 
 ![image](https://github.com/fcurrao/-naturaldeli/blob/main/PRIMERA-ENTREGA-federico-Currao.gif.gif)
+https://github.com/ZhengYaWei1992/ZWProgressView/blob/master/Untitled3.gif
 
 ![image](https://github.com/fcurrao/-naturaldeli/blob/main/public/assets/img/tiendadeli.jpg)
 
