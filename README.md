@@ -2,12 +2,19 @@
 # BIENVENIDOS A NATURAL DELI
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-![PRIMERA-ENTREGA-federico-Currao gif](https://user-images.githubusercontent.com/68132577/182894280-071d397f-b203-45a5-9265-4085eec619cc.gif)
+This project was bootstrapped with [Create React App] 
 
+
+## Previews:
+![1](https://user-images.githubusercontent.com/68132577/182894870-611ba116-0154-470a-aaf8-74ba310e3cd9.jpg)
+
+
+![2](https://user-images.githubusercontent.com/68132577/182894889-a68f7b88-bfd3-4947-8f20-3173818f83cb.jpg)
 
 ## Description
 This is the site of a small local market. Where they sell healthy products.
+
+
 
 ![image](https://github.com/fcurrao/-naturaldeli/blob/main/PRIMERA-ENTREGA-federico-Currao.gif.gif)
 https://github.com/fcurrao/-naturaldeli/blob/main/PRIMERA-ENTREGA-federico-Currao.gif.gif
