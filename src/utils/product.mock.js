@@ -7,6 +7,8 @@ category: "Almacen",
 filtradito: "oferta",
 price: 150,
 image: 'ARROZ.jpg',
+image2: 'ARROZ.jpg',
+image3: 'ARROZ.jpg',
 stock: 8
 },
 {
@@ -17,6 +19,8 @@ category: "Almacen",
 filtradito: "oferta",
 price: 1200,
 image: 'YERBA.jpg',
+image2: 'YERBA.jpg',
+image3: 'YERBA.jpg',
 stock: 12
 },
 {
@@ -27,6 +31,8 @@ category: "Congelados",
 filtradito: "oferta",
 price: 460,
 image: 'CHOCLO.jpg',
+image2: 'CHOCLO2.jpg',
+image3: 'CHOCLO3.jpg',
 stock: 44
 },
 {
@@ -37,6 +43,8 @@ category: "Almacen",
 filtradito: "oferta",
 price: 421,
 image: 'FIDEOS.jpg',
+image2: 'FIDEOS.jpg',
+image3: 'FIDEOS.jpg',
 stock: 54
 },
 {
@@ -47,6 +55,8 @@ category: "Almacen",
 filtradito: "oferta",
 price: 560,
 image: 'MAYONESA.jpg',
+image2: 'MAYONESA.jpg',
+image3: 'MAYONESA.jpg',
 stock: 33
 },
 {
@@ -57,6 +67,8 @@ category: "Congelados",
 filtradito: "oferta",
 price: 1530,
 image: 'HAMBURGESA DE POLLO.jpg',
+image2: 'HAMBURGESA DE POLLO.jpg',
+image3: 'HAMBURGESA DE POLLO.jpg',
 stock: 33
 },
 {
@@ -67,6 +79,8 @@ category: "Almacen",
 filtradito: "oferta",
 price: 220,
 image: 'GALLETAS DE AGUA.jpg',
+image2: 'GALLETAS DE AGUA.jpg',
+image3: 'GALLETAS DE AGUA.jpg',
 stock: 33
 },
 {
@@ -77,6 +91,8 @@ category: "Almacen",
 filtradito: "oferta",
 price: 400,
 image: 'GALLETAS DE GARBANZO.jpg',
+image2: 'GALLETAS DE GARBANZ.jpg',
+image3: 'GALLETAS DE GARBANZ.jpg',
 stock: 33
 },{
 id: 9,
@@ -86,6 +102,8 @@ category: "Almacen",
 filtradito: "oferta",
 price: 560,
 image: 'SAL ROSA.jpg',
+image2: 'SAL ROSA.jpg',
+image3: 'SAL ROSA.jpg',
 stock: 33
 },{
 id: 10,
@@ -95,6 +113,8 @@ category: "Dulces",
 filtradito: "oferta",
 price: 160,
 image: 'ALFAJOR.jpg',
+image2: 'ALFAJOR.jpg',
+image3: 'ALFAJOR.jpg',
 stock: 14
 },{
 id: 11,
@@ -104,6 +124,8 @@ category: "Frescos",
 filtradito: "oferta",
 price: 560,
 image: 'JUGO1.jpg',
+image2: 'JUGO1.jpg',
+image3: 'JUGO1.jpg',
 stock: 27
 },{
 id: 12,
@@ -113,6 +135,8 @@ category: "Frescos",
 filtradito: "oferta",
 price: 560,
 image: 'JUGO2.jpg',
+image2: 'JUGO2.jpg',
+image3: 'JUGO2.jpg',
 stock: 30
 }  
 ]

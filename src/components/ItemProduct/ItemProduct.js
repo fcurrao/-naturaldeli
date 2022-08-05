@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import Detail from '../../pages/Detail'
 import products from '../../utils/product.mock'
+import { useContext } from "react"
+import { CartContext } from "../../context/CartContext"
+
 
 const ItemProduct = ({ data }) => {
 
@@ -34,14 +37,13 @@ const ItemProduct = ({ data }) => {
     const en12cuotasSub = (price / 12);
     const en12cuotas = en12cuotasSub.toFixed(2);
 
-
     return (
         <div>
-            {/* <Detail data={productData} /> */}
             <Link to={`/productos/${id}`}>
 
                 <div className="item-product margin hoverr">
                     <img src={`../assets/img/${image}`} alt="Imagen producto" />
+                    {/* {namee} */}
                     <div className="item-product2" >
                         <span className="chiquito1 badge badge-warning">{category}</span>
                         <p className='chiquito1'>Producto Organico</p>

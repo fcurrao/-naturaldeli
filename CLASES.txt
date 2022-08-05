@@ -5,6 +5,7 @@ REPOSITORIO EJERCICIO PROFE:
 https://github.com/cortiz2894/test-ecommerce-34685
 
 
+- COMO PONERLO EN PAGES DE GITHUB, (ya que es REACT , dinamico)
 
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -1311,7 +1312,95 @@ Se pasa la info de hijos a Padres , gracias a eventos.
 
 
 
-<
+
+stop propagation , para el efecto en ese lugar
+
+ 
+
+
+
+
+**********************************************************
+***************************************
+CLASE 9 |  CONTEXTO  (pasa informacion forma GLOBAL)
+***************************************
+**********************************************************
+
+- pasar info a toda la app
+Hay que englobar la APP
+
+- Sirve para mandar info para arriba.
+
+React.createContext
+ThemeContext. Provider
+
+proveedor
+
+
+==================
+
+import { createContext } from "react";
+
+
+const CartContext = CreateContext ()
+
+const CartProvider = ({children}) =>{
+
+    return(
+        <CartContext.Provider>
+            {children} // el resto de la APP
+        </CartContext.Provider>
+
+    )
+}
+
+export default CartProvider
+
+
+********
+usecontext
+CartContext
+CartProvider
+===================
+
+- SE ENGLOBA TODO LO QUE QUIERO QUE LO PUEDA USAR.
+LUEGO SE HACE EL CARTCONTEXT ( O JSCONTEXT) , Y LUEGO DONDE SE QUIERA USAR ( SIEMPRE Y CUANDO ESTUVO ENGLOBADA)
+SE IMPORTA EL USECONTEXT Y JSCONTEXT ( O CARTCONTEXT) Y LUEGO SE DESCONTRACTURA Y ASI SE USA LOS ELEMENTOS ..
+
+
+************
+PARA LA TAREA USAR DE EJEMPLO:
+
+EJEMPLO 1
+https://stackblitz.com/edit/react-6ymjfz?file=src%2Fcontext%2FCartContext.js
+
+EJEMPLO 2
+https://github.com/cortiz2894/test-ecommerce-34685/commit/57e5bfb4d4779642f12f65446ecae6da894ef137
+
+
+
+
+
+
+**********************************************************
+***************************************
+CLASE 10 |  
+***************************************
+**********************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

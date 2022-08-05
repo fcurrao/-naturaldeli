@@ -1,8 +1,11 @@
 import './ItemCount.css'
 import {useState} from 'react'
+import CartProvider, { CartContext } from '../../context/CartContext'
+import { useContext } from 'react'
 
-const ItemCount = ({stock,initial,setQtySelect}) => {
+const ItemCount = ({productData,stock,initial,quantitiSelected,setQtySelect}) => {
 
+    const {addProductToCart} = useContext(CartContext)
     const [counter, setCounter] = useState(initial) 
     const addNumber = () => {
         if (stock > counter){
@@ -14,8 +17,10 @@ const ItemCount = ({stock,initial,setQtySelect}) => {
     }}
     const onAdd = () =>{
         setQtySelect(counter)
+        addProductToCart(productData)
+        console.log("producto: ",productData)
+        console.log("cantidad: ",quantitiSelected)
     }
-
 
 
 return(

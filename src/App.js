@@ -14,42 +14,39 @@ import Detail from './pages/Detail';
 import Products from './pages/Products';
 import Descuento from './pages/Descuento';
 import Checkout from './pages/Checkout';
+import CartProvider from './context/CartContext';
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="colorFondo">
+    <CartProvider >
+      <BrowserRouter>
+        <div className="colorFondo">
 
 
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/-naturaldeli/" element={<Home />} />
 
 
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/-naturaldeli/" element={<Home />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/descuento" element={<Descuento />} />
 
-           
-
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/descuento" element={<Descuento />} />
-
-          <Route path="/productos/" element={<Products />} />
-          <Route path="/productos/:id" element={<Detail />} />
-          <Route path="/categorias/:categoryid" element={<ItemListContainer />} />
-          <Route path="/cart" element={<Checkout />} />
-          <Route path="*" element={<h1>ERROR 404 - PAGINA NO ENCONTRADA</h1>} />
-        </Routes>
+            <Route path="/productos/" element={<Products />} />
+            <Route path="/productos/:id" element={<Detail />} />
+            <Route path="/categorias/:categoryid" element={<ItemListContainer />} />
+            <Route path="/cart" element={<Checkout />} />
+            <Route path="*" element={<h1>ERROR 404 - PAGINA NO ENCONTRADA</h1>} />
+          </Routes>
 
 
+          {/* <footer> FOOTER</footer> */}
+        </div>
 
-
-
-
-        {/* <footer> FOOTER</footer> */}
-      </div>
-
-    </BrowserRouter>
+      </BrowserRouter>
+      </CartProvider>
   );
 }
 
