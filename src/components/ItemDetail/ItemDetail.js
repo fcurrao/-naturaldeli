@@ -6,11 +6,14 @@ import detail from '../../pages/Detail'
 import { useParams } from 'react-router-dom'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react'
+import CartProvider, { CartContext } from '../../context/CartContext'
+import { useContext } from 'react'
 
 
 const ItemDetail = ({ data }) => {
     
-    const { id, title, description, image,image2,image3, category, filtradito, price, stock } = data
+    const { id, title, description, image,image2,image3, qty,category, filtradito, price, stock } = data
+    const {cartProducts,addProductToCart,setCantidadXCarro,cantidadXCarro} = useContext(CartContext)
     const [quantitiSelected, setQuantitiSelected] = useState(0)
     const [fotoGrande , setFotoGrande] = useState(1)
     
@@ -23,6 +26,15 @@ const ItemDetail = ({ data }) => {
 
     const onSubmitComprar = () => {
         console.log("Tocaste Boton   COMPRAR")
+        console.log("producto: ",data)
+        console.log("cantidad: ",quantitiSelected)
+        console.log("aaa: ,", cantidadXCarro)
+        console.log("Array del changito",cartProducts)
+        qty = quantitiSelected;
+        // setQtySelect(counter)
+        //  CantidadXCarro(counter)
+        // addProductToCart(productData,counter)
+
     }
 
     const onSubmitChangePicture1 = () => {
@@ -35,6 +47,12 @@ const ItemDetail = ({ data }) => {
     const onSubmitChangePicture3 = () => {
         setFotoGrande(3)
     }
+
+
+
+
+
+
 
 
     return (

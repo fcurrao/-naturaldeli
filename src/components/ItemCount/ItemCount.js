@@ -5,7 +5,8 @@ import { useContext } from 'react'
 
 const ItemCount = ({productData,stock,initial,quantitiSelected,setQtySelect}) => {
 
-    const {addProductToCart} = useContext(CartContext)
+    const {cartProducts,addProductToCart,setCantidadXCarro,cantidadXCarro} = useContext(CartContext)
+    const qty = quantitiSelected;
     const [counter, setCounter] = useState(initial) 
     const addNumber = () => {
         if (stock > counter){
@@ -15,11 +16,15 @@ const ItemCount = ({productData,stock,initial,quantitiSelected,setQtySelect}) =>
         if(counter>initial){
             setCounter(counter - 1)
     }}
+
+
     const onAdd = () =>{
         setQtySelect(counter)
-        addProductToCart(productData)
+        setCantidadXCarro(counter)
+        addProductToCart(productData,counter)
         console.log("producto: ",productData)
-        console.log("cantidad: ",quantitiSelected)
+        console.log("cantidad: ",qty)
+        console.log("aaa: ,", cantidadXCarro)
     }
 
 

@@ -1,76 +1,97 @@
 
 
 
- 
-    import CartProvider, { CartContext } from '../context/CartContext'
-    import { useContext } from 'react'
+
+import CartProvider, { CartContext } from '../context/CartContext'
+import { useContext } from 'react'
+import CartWidget from "../components/CartWidget/CartWidget"
 import "../pages/pages.css"
+import { Link } from 'react-router-dom'
 
 const Checkout = () => {
 
 
 
+    const { addProductToCart, cartProducts, clear, removeProductToCart, setCantidadXCarro, cantidadXCarro } = useContext(CartContext)
 
- 
-        const { cartProducts,
-            isInCart,
-            removeProductToCart,
-            addProductToCart,
-            clear
-        } = useContext(CartContext)
-        // TOTAL  tiene que ser un parametro que me lo pase la pagina...
-        const total = 2;
+    const { id, title, description, image, category, filtradito, price, qty, stock } = cartProducts
+
+    // TOTAL  tiene que ser un parametro que me lo pase la pagina...
+
+    let total = 0
+    let subtotal = 0
 
 
+    console.log("xxxxxxxxxxxxxxxxxxxxxxx", cartProducts)
 
-
-
-
-
-
-
-
-
-        return (
-            <>
-            <section>
-<h1 className="titulo centrado">Cart </h1>
-<h2>{cartProducts}, 
-            {isInCart},
-            {removeProductToCart},
-            {addProductToCart},
-            {clear}</h2>
-
-
-      </section>
-
-    
-           
-    
-    <div className="bi bi-cart4 carritoDerecha">
-                                <svg className="bi bi-cart4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                    <path className="carritoDerecha carro" d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
-                                </svg> ${total}</div>
-    
-                {/* // fragment  */}
-                {/* console.log () */}
-                <h3>s</h3>
-                {cartProducts.map((product) => {
-                    return (
-                        <> <div>esto: {product.id}</div>
-                            
-                        </>
-                    )
-                })}
-    <h3>s</h3>
-    
-    
-    
-    
-            </>
-        )
+    const removerUno = (id) => {
+        removeProductToCart(id)
     }
-    
+
+    return (
+        <>
+
+
+
+            <section>
+                <h1 className="titulo centrado">Tu Carrito  </h1>
+                <div>
+                    {cartProducts.map((product) => {
+                        {
+                            subtotal = product.price * product.qty;
+                            total = subtotal + total
+                        }
+                        return <>
+                            <div className="item-product margin hoverr">
+                                <img src={`../assets/img/${product.image}`} alt="Imagen producto" />
+                                {/* {namee} */}
+                                <div className="item-product2" >
+                                    <span className="chiquito1 badge badge-warning">{product.category}</span>
+                                    <p className='description2'>Producto Organico</p>
+                                    <h1>{product.title}</h1>
+                                    <p className='description2'>{product.description}</p>
+                                    <h2 className='description2 azul'>{product.qty} </h2> <p>Unidades de </p>
+                                    <span className="btn2 btn btn-primary">$ {product.price}</span><br></br>
+                                    <h2 className='description2'>Total: {subtotal}</h2>
+
+                                    <div>
+                                        <button className="btn btn-group2 bttn" onClick={() => removeProductToCart(product.id)}>Remover</button>
+
+                                        <Link to={`/productos/${product.id}`}>
+                                            <button className="btn btn-group2 bttn" >Agregar mas</button>
+                                        </Link>
+                                        {/* <button className="btn btn-group2 bttn" onClick={removeProductToCart}>Remover</button> */}
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </>
+                    })}
+                </div>
+                <div>
+                    <h2 className='margin2 float-left'>Total del Carro: {total}</h2>
+                </div>
+
+                <button className="btn btn-group2 bttn  float-left margin3"> Continuar PAGO</button>
+
+                <img className='margin2' src={`../assets/img/tarjetas.png`} alt="Imagen tarjetas" />
+                <div className='medioo'>
+                    <button className="btn btn-group2 bttn float-left margin4"> Mas Info</button>
+                    <button className="btn btn-group2 bttn  float-left margin4 red" onClick={clear}>Limpiar Carrito</button>
+                </div>
+            </section>
+
+
+
+
+
+        </>
+    )
+}
+
 
 
 export default Checkout

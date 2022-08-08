@@ -7,6 +7,7 @@ import Detail from '../../pages/Detail'
 import products from '../../utils/product.mock'
 import { useContext } from "react"
 import { CartContext } from "../../context/CartContext"
+import Modal from '../Modal/Modal'
 
 
 const ItemProduct = ({ data }) => {
@@ -21,8 +22,11 @@ const ItemProduct = ({ data }) => {
 
 
 
-    const onSubmitDetalle = () => {
+    const onSubmitDetalle = (e) => {
+        e.stopPropagation()
         console.log("Tocaste Boton   detalle producto")
+        // <Modal />
+
     }
 
 
@@ -54,6 +58,7 @@ const ItemProduct = ({ data }) => {
 
                         <div>
                             <button className="btn btn-group2 bttn" onClick={onSubmitDetalle}>Detalle Producto</button>
+                          
                         </div>
                     </div>
                 </div>

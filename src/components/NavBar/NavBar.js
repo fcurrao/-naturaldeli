@@ -45,11 +45,7 @@ const NavBar = () => {
                 <Link to="/descuento" className="dropdown-item letritas" href="#">Nuevos Productos</Link>
               </div>
             </li>
-
-            <li className="nav-item">
-              <Link to="/" className="nav-link disabled letritas" href="index.html">Carrito</Link>
-            </li>
-
+ 
             <li className="nav-item">
               <a className="nav-link disabled " href="http://www.google.com.ar" target="_blank" > <li>GOOGLE</li> </a>
             </li>

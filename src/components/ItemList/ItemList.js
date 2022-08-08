@@ -9,13 +9,7 @@ const ItemList = ({listProducts}) => {
     console.log("dato", namee)
 return (
 <>
-<button onClick={() => console.log("dato", namee)}> Click</button>
-
-
- <button onClick={() => setNamee("franco")}> Click</button>
-
-<button onClick={apellidoo}> Click</button> 
-
+ 
 {listProducts.map((product)=> {
 return <ItemProduct key={product.id} data={product}/>
 })}       

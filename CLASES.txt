@@ -1312,7 +1312,7 @@ Se pasa la info de hijos a Padres , gracias a eventos.
 
 
 
-
+e.stopPropagation()
 stop propagation , para el efecto en ese lugar
 
  

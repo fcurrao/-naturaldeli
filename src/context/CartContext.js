@@ -5,7 +5,7 @@ const CartContext = createContext()
 const CartProvider = ({children}) => {
 
 
-    
+    const [cantidadXCarro, setCantidadXCarro] = useState()
     const [cartProducts, setCartProducts] = useState([])
     const [namee,setNamee] = useState('Natural Deli')
  
@@ -16,6 +16,7 @@ const CartProvider = ({children}) => {
         newCarrito.splice( index, 1 );
 
         setCartProducts([...newCarrito]);
+        
     }
 
     const clear = () => { 
@@ -59,6 +60,8 @@ const CartProvider = ({children}) => {
 
     const dataa = { 
         cartProducts,
+        cantidadXCarro,
+        setCantidadXCarro,
         isInCart,
         removeProductToCart,
         addProductToCart,

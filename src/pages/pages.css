@@ -29,6 +29,61 @@
   height: 500px; 
 }
 
+.margin2{
+    width: 100%;    
+    padding: 8px !important;
+    margin-top: 4% !important; 
+    text-align: center;
+}
+
+
+
+.margin3{ 
+    width: 70%;
+    margin-left: 15%;
+    border: 1px solid black !important;
+    padding: 2px !important;
+    margin-top: 1% !important;
+    margin-bottom: 1% !important;
+    text-align: center;
+    background-color: blue !important;
+}
+
+
+
+
+.margin4{
+    width: 18%;
+    border: 1px solid black !important;
+    padding: 2px !important;
+    margin-top: 1% !important;
+    margin-bottom: 1% !important;
+    text-align: center;
+}
+
+.medioo{
+width: 100%;
+text-align: center;
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+align-content: flex-end;
+justify-content: center;
+}
+
+.red{
+   color: white !important;
+    background-color: red !important;
+}
+
+.azul{
+    color:  blue !important;
+    font-size: 30px;
+ }
+ 
+ 
+
+
 .colorblanco{
     background-color: white;
     color: white;
@@ -48,6 +103,9 @@ padding-left: 10%;
 
 }
 
+.float-left{
+    float: left;
+}
 
 .next{
     padding-right: 180px;
@@ -69,4 +127,8 @@ padding-left: 10%;
     font-weight: 900;
     opacity: 10 !important;
         color: white;
+}
+
+.bttn{
+    margin-right: 10px;
 }
