@@ -7,6 +7,19 @@ https://github.com/cortiz2894/test-ecommerce-34685
 
 - COMO PONERLO EN PAGES DE GITHUB, (ya que es REACT , dinamico)
 
+- hooks :
+https://es.reactjs.org/docs/hooks-reference.html#usereducer
+
+- BOOTSRAP para REACT: 
+
+https://react-bootstrap.github.io/components/spinners/
+
+otro parecido 
+
+- materialize !:
+https://materializecss.com/icons.html
+
+
 
 /////////////////////////////////////////////////////////////////////////////////
 
@@ -294,6 +307,9 @@ set
 useref
 
 setname
+
+muchos hook
+https://es.reactjs.org/docs/hooks-reference.html#usereducer
 
 
 
@@ -1384,26 +1400,97 @@ https://github.com/cortiz2894/test-ecommerce-34685/commit/57e5bfb4d4779642f12f65
 
 **********************************************************
 ***************************************
-CLASE 10 |  
+CLASE 10 |  REENDERIZADO CONDICIONAL. || REENDERING .. RENDER OPTIMIZACION.
 ***************************************
 **********************************************************
 
+* REENDERIZADO ::
+
+- flujo de reenderizado ( contagia el recargado a sus hijos)
+- se puede evitar el contagio de recaragado.
+
+
+-------------------------------------
+
+* REENDERIZADO CONDICIOONAL:  3 estilos
+
+
+----------
+* ESTILO TERNARIO (if y else)
+aglo ? <h1> true </h1> :  <h1> false </h1>
+
+- sirve para aparecer y desaparacer el dom.
+
+
+----------
+* ESTILO CON RETURN
+EL RETURN CORTA EL IF.
+
+funcion condicional () => {
+if (condicion){
+  return (console.log ("se cumple"))
+}
+return   (console.log ("NO se cumple"))
+}
+
+--------------------
+* ESTILO INLINE CON FRAGMENT: (sirve sin else)
+{condicion &&   <h1> true </h1>  }
+{!condicion &&    <h1> false </h1> }
+
+
+----------------------------------------
+
+eventos siempre callback (llamada denuevo)
+
+
+-------------------------------------------
+--------------------
+* MOSTRAR UNA CLASE CUANDO EL "MODAL" ESTE ACTIVO
+
+overlay-black
+ternario para agregar o sacar clases.
+
+* ESTILOS  O  CLASE (agregar o quitar) ::
+<h2 style={{ color: !condicion ? 'red' : 'green'}}
+
+-------------------------------------------
+------------------------------------------
+
+- pongo propiedaes juntas=
+
+props {
+data: dataproduct,
+stock: stock,
+cantidad: qty
+}
+
+<input {...props} />
+
+
+-------------------------------------------
+------------------------------------------
+
+* RENDER OPTIMIZACION
+
+
+* METODO MEMO (memoizing):
+Se usa SOLO si es muy pesado el prox componente (tipo una API) y es al pedo 
+
+export default memo(componenteAMemoizing)
+
+
+* 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+**********************************************************
+***************************************
+CLASE 11 | 
+***************************************
+**********************************************************
 
 
 
