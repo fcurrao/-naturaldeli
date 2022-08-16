@@ -8,14 +8,17 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react'
 import CartProvider, { CartContext } from '../../context/CartContext'
 import { useContext } from 'react'
+import Modal from '../Modal/Modal'
 
 
 const ItemDetail = ({ data }) => {
     
     const { id, title, description, image,image2,image3, qty,category, filtradito, price, stock } = data
     const {cartProducts,addProductToCart,setCantidadXCarro,cantidadXCarro} = useContext(CartContext)
+    const [imagensita, setImagensita] = useState('')
     const [quantitiSelected, setQuantitiSelected] = useState(0)
     const [fotoGrande , setFotoGrande] = useState(1)
+    const [modaleState , setModalState] = useState(false)
     
     const en12cuotasSub = (price / 12);
     const en12cuotas = en12cuotasSub.toFixed(2);
@@ -52,8 +55,20 @@ const ItemDetail = ({ data }) => {
 
 
 
+    const onModal1 = ( ) => {
+    setModalState(true)
+    setImagensita(image)
+    }
 
+    const onModal2 = ( ) => {
+        setModalState(true)
+        setImagensita(image2)
+        }
 
+        const onModal3 = ( ) => {
+            setModalState(true)
+            setImagensita(image3)
+            }
 
     return (
         <div className="item-product-zoom">
@@ -65,19 +80,19 @@ const ItemDetail = ({ data }) => {
 
             {
                 fotoGrande == 1 ? 
-            <div className="item-product2">
-                <img src={`../assets/img/${image}`} alt="Imagen producto" />
+                <div className="item-product2">
+                <img src={`../assets/img/${image}`} onClick={onModal1} alt="Imagen producto" />
             </div>
             :   fotoGrande == 2 ? 
             <>
-              <div className="item-product2">
-                <img src={`../assets/img/${image2}`} alt="Imagen producto" />
+              <div className="item-product2" >
+                <img src={`../assets/img/${image2}`}  onClick={onModal2}  alt="Imagen producto" />
             </div>
              </>
             : 
             <>
-              <div className="item-product2">
-                <img src={`../assets/img/${image3}`} alt="Imagen producto" />
+              <div className="item-product2"  >
+                <img src={`../assets/img/${image3}`} onClick={onModal3}   alt="Imagen producto" />
             </div>
             </>
             }
@@ -102,6 +117,9 @@ const ItemDetail = ({ data }) => {
                        <Link to={`/cart`}> 
                             <button className="btn btn-group btnx2" onClick={onSubmitComprar}>Terminar Compra</button> 
                         </Link>     
+                        <Link to={`/productos`}> 
+                            <button className="btn btn-group btnx2" onClick={onSubmitComprar}>Seguir comprando...</button> 
+                        </Link> 
                        </>                           
                             : 
                             <>
@@ -109,11 +127,8 @@ const ItemDetail = ({ data }) => {
                        <p className='chiquito1'>stock disponible: {stock}</p>
                        </>    
                    }
-
-                  
-               
-                    
-                    
+                     { modaleState &&  <Modal data={data} setModalState={setModalState} imagensita={imagensita}/>  }
+                 
                 </div>
             </div>
         </div>

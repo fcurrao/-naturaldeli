@@ -45,28 +45,3 @@ function App() {
 export default App;
 
 
-
-
-
-
-
-
-
-
-{/* <ItemDetailContainer className="cotenedores" secciones="Productos Congelados" /> */ }
-
-
-
-{/* <ItemListContainer className="cotenedores" secciones="Productos de temporada"/>
-        <ItemListContainer className="cotenedores" secciones="Productos mas comprados"/> */}
-
-
-{/* <Modal title="MODAL DE REGISTRO">
-        <form>
-          <input type="text" />
-          <input type="text" />
-          <input type="text" />
-          <button>enviar</button>
-        </form>
-      </Modal> */}
-

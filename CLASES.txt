@@ -1453,6 +1453,7 @@ ternario para agregar o sacar clases.
 
 * ESTILOS  O  CLASE (agregar o quitar) ::
 <h2 style={{ color: !condicion ? 'red' : 'green'}}
+<h2 className={{ condicion? nombredeClase : otroNombredeClase }}
 
 -------------------------------------------
 ------------------------------------------

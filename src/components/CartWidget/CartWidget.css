@@ -23,13 +23,43 @@
 .dropdown-menu.show {
     width: min-content;
     display: block !important;
-    left: -355% !important;
+    left: -600% !important;
+}
+
+.btnBlue{
+
+}
+
+.btncarro{
+    background: none !important;
+    width: 120% !important;
+    margin: none !important;
+}
+
+
+.btncarro:hover{  
+    margin: none !important;
+    background-color: transparent !important;
+}
+
+
+.carro{
+    width: 85%;
+} 
+
+.btnp{
+ background-color: blue !important;
+}
+
+#nadda {
+    width: max-content !important; 
+    left: -300% !important;
 }
 
 .ajam{
     width: min-content;
     display: block !important;
-    left: -355% !important;
+    left: -600% !important;
 }
 
 .item-productx{
@@ -65,3 +95,10 @@
     transition: all ease 0.4s;
 
 }
+
+
+.bttn{
+    margin: 2px;
+    margin-left: 10px;
+}
+ 

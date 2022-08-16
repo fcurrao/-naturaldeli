@@ -2,36 +2,42 @@ import { createContext, useState } from "react";
 
 const CartContext = createContext()
 
-const CartProvider = ({children}) => {
+const CartProvider = ({ children }) => {
 
 
     const [cantidadXCarro, setCantidadXCarro] = useState(0)
     const [cartProducts, setCartProducts] = useState([])
-    const [namee,setNamee] = useState('Natural Deli') 
 
-    const removeProductToCart = (id) => {
-       
-        const newCarrito = [...cartProducts];
-        let index = newCarrito.findIndex(uno => uno.id === id);
-        setCantidadXCarro(cantidadXCarro-index.qty)
-        newCarrito.splice( index, 1 );
+
+
+    const removeProductToCart = (product) => {
+
+        const index = cartProducts.find(uno => uno.id === product.id);
+
+
+        setCantidadXCarro(cantidadXCarro - index.qty)
+        const newCarrito = cartProducts.filter((index) => index.id !== product.id);
 
         setCartProducts([...newCarrito]);
-        
+        console.log(cartProducts)
+
     }
 
-    const clear = () => { 
+
+
+
+    const clear = () => {
         setCartProducts([])
         setCantidadXCarro(0)
     }
 
     const isInCart = (id) => {
 
-        if(cartProducts.some(uno => uno.id == id)){ 
+        if (cartProducts.some(uno => uno.id == id)) {
             return (
                 console.log("TRUE")
             )
- 
+
         } else {
             console.log("FALSE")
         }
@@ -42,45 +48,70 @@ const CartProvider = ({children}) => {
     //  if(!isInCart){
 
 
-    const addProductToCart = (product, qty) => { 
-        setCantidadXCarro(cantidadXCarro+qty)
-     if(cartProducts.some(uno => uno.id == product.id)){
-        
-        let index = cartProducts.findIndex(uno => uno.id == product.id)
-        let itemPF = cartProducts[index]
-        itemPF.qty =    itemPF.qty + qty
+    const addProductToCart = (product, qty) => {
+        setCantidadXCarro(cantidadXCarro + qty)
+        if (cartProducts.some(uno => uno.id == product.id)) {
 
-        const newCarrito = [...cartProducts]
-        newCarrito.splice(index,1,itemPF)
+            let index = cartProducts.findIndex(uno => uno.id == product.id)
 
-        setCartProducts([...newCarrito])
-    
-    
-    } else {
 
-        let itemF = {...product,qty}
-        setCartProducts([...cartProducts, itemF ]);
+
+            let itemPF = cartProducts[index]
+            itemPF.qty = itemPF.qty + qty
+
+            const newCarrito = [...cartProducts]
+            newCarrito.splice(index, 1, itemPF)
+
+            setCartProducts([...newCarrito])
+
+
+        } else {
+
+            let itemF = { ...product, qty }
+            setCartProducts([...cartProducts, itemF]);
+        }
     }
-}
-// setCartProducts(cartProducts => [...cartProducts, product])
-    console.log (cartProducts)
 
-    const dataa = { 
+
+    const removeONEProductToCart = (product, qty) => {
+        setCantidadXCarro(cantidadXCarro - qty)
+        if (cartProducts.some(uno => uno.id == product.id)) {
+
+            let index = cartProducts.findIndex(uno => uno.id == product.id)
+            let itemPF = cartProducts[index]
+            itemPF.qty = itemPF.qty - qty
+
+            const newCarrito = [...cartProducts]
+            newCarrito.splice(index, 1, itemPF)
+
+            setCartProducts([...newCarrito])
+
+
+        }
+    }
+
+
+
+    // setCartProducts(cartProducts => [...cartProducts, product])
+    console.log(cartProducts)
+
+    const dataa = {
         cartProducts,
         cantidadXCarro,
         setCantidadXCarro,
         isInCart,
         removeProductToCart,
+        removeONEProductToCart,
         addProductToCart,
         clear
     }
-    
-   
-    return(
+
+
+    return (
         <CartContext.Provider value={dataa}>
-                {/* <CartContext.Provider value={namee,apellidoo}></CartContext.Provider> */}
+            {/* <CartContext.Provider value={namee,apellidoo}></CartContext.Provider> */}
             {children}
-            </CartContext.Provider>
+        </CartContext.Provider>
 
     )
 }

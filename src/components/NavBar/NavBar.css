@@ -11,11 +11,59 @@ color:darkslategrey;
 }
 
 .letritas{
-font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-color: #d94d5a !important;
+    font-family: "Proxima Nova",-apple-system,Roboto,Arial,sans-serif,sans-serif;
+    line-height: 22px;
+    font-size: 19px;
+color: rgb(51,51,51,.6) !important; 
 }
 
-.zoomsito{
+.zoomsito{ 
     zoom: 75%;
     color: #d94d5a !important;
+}
+
+
+.bg-light {    
+    background-color: #fed905b0!important;
+    height: 110px !important;
+}
+
+.logogrande{
+    width: 142%;
+    margin-bottom: 35px;
+    padding-right: 85px;
+
+}
+
+.sinborde{
+    border: none;
+    border-radius: 4px;
+}
+
+
+.inputsito{
+    width: 70%;
+    height: 180% !important;
+}
+
+
+#unosectordiv{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px !important;
+}
+
+#dossector{
+    display: flex;
+    padding-left: 800px !important;
+
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    justify-content: end;
+    flex-direction: row;
+    text-align: end;
 }
