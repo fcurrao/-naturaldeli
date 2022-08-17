@@ -54,7 +54,7 @@ const NavBar = () => {
                 <a className="nav-link dropdown-toggle letritas" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Categorias
                 </a>
-                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div className="dropdown-menu dropdown-menu2 .dropdown-menu.show2" aria-labelledby="navbarDropdown">
                   <Link to="/categorias/Almacen" className="dropdown-item letritas" href="#">Almacen</Link>
                   <Link to="/categorias/Congelados" className="dropdown-item letritas" href="#">Congelados</Link>
                   <Link to="/categorias/Frescos" className="dropdown-item letritas" href="#">Frescos</Link>
@@ -75,15 +75,16 @@ const NavBar = () => {
         </sector>
         < sector id="dossector">
 
-          <div  id="dossectordiv">
-
-            <Link to="/" className="nav-link disabled btn3 lgrande" href="index.html">Log In </Link>
-
-
-          </div>
+        
           <div id="dossectordivdos">
           <CartWidget />
           </div>
+          <div  id="dossectordiv">
+
+<Link to="/" className="nav-link disabled btn3 lgrande" href="index.html">Log In </Link>
+
+
+</div>
         </sector>
 
       </nav>

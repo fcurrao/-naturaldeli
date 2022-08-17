@@ -6,13 +6,71 @@ import './ItemListContainer.css'
 import products from "../../utils/product.mock"
 import { useParams } from 'react-router-dom'
 import Detail from '../../pages/Detail'
-import { collection, getDocs } from "firebase/firestore"
+import { collection, getDocs, query, where } from "firebase/firestore"
 import db from "../../firebaseConfig"
 
 const ItemListContainer = ({ secciones }) => {
 
-    const { categoryid } = useParams()
+    const { categoryid, todos } = useParams()
     const [listProducts, setlistProducts] = useState([])
+
+
+    
+    const getItem = async () => {
+        const productCollection = collection(db , 'products')
+        const productSnapshot = await getDocs(productCollection)
+
+        const productList = productSnapshot.docs.map((doc)=>{
+            let product = doc.data()
+            product.id = doc.id
+            return product
+        })
+  
+
+        // const filterByCategory = productList
+        // if (todos == )
+        // const filterByCategory = productList.filter((product) => product.category == categoryid)
+           //     const categorys =    db.collection("products").where("Almacen", "==", categoryid) 
+      
+        return productList
+        console.log('productList', productList)
+    }
+    
+    // const filterByCategory = listProducts.filter((product) => product.category == categoryid)
+    //         filterByCategory()
+
+    
+
+    
+    
+    
+    useEffect(() => {
+        getItem()
+        .then((res)=> {
+            setlistProducts(res)
+            
+    
+  
+        // const categorys = query(collection(db, "products"), where("categoryid", "==","Almacen"), 
+        // where("categoryid", "==", "Congelados"), where("categoryid", "==",   "Dulces"), where("categoryid", "==", "Frescos"))
+
+    })
+    }, [categoryid])
+
+
+    
+
+    // filtrar por categoria: 
+// pero categoria === "nombre de la categoria"
+// WHERE (diapositiva 59 - clase 11)
+
+
+
+
+
+
+
+
     // const filterByCategory = products.filter((product) => product.category == categoryid)
 
 
@@ -49,42 +107,6 @@ const ItemListContainer = ({ secciones }) => {
 
  
 
-    // filtrar por categoria: 
-// pero categoria === "nombre de la categoria"
-// WHERE (diapositiva 59 - clase 11)
-
-
-// const categorys = query(collection(db, "products"), where(" product.category, "==", "Almacen")
-
-
-
-
-    const getItem = async () => {
-        const productCollection = collection(db , 'products')
-        const productSnapshot = await getDocs(productCollection)
-
-        const productList = productSnapshot.docs.map((doc)=>{
-            let product = doc.data()
-            product.id = doc.id
-            return product
-        })
-        return productList
-
-    console.log('productList', productList)
-    }
-
-    
-
-
-
-    useEffect(() => {
-
-        getItem()
-        .then((res)=> {
-            setlistProducts(res)
-        })
-        
-    }, [])
 
 
     // se trae los productos , solo en el montaje nomas.

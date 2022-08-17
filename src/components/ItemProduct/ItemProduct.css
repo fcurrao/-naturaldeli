@@ -249,9 +249,9 @@ background: none;
     display: flex !important;
     align-items: center !important;
     flex-direction: column !important;
-    flex-wrap: nowrap !important;
-    align-content: center;
-    justify-content: center;
+    /* flex-wrap: nowrap !important; */
+    /* align-content: center; */
+    /* justify-content: center; */
     /* align-items: flex-start !important; */
     /* width: max-content !important; */
     /* background-color: beige !important; */
@@ -262,9 +262,9 @@ background: none;
     position: relative;
     margin-right: 10px;
     margin-bottom: 10px;
-    padding-top: 0px;
-    zoom: 100%;
-    width: 600px !important;
+    padding-top: 10px;
+    zoom: 70%;
+    width: 577px !important;
     height: 350px !important;
 }
 

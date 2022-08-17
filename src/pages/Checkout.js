@@ -13,7 +13,7 @@ const Checkout = () => {
 
 
 
-    const { addProductToCart, cartProducts, clear, removeProductToCart, setCantidadXCarro, removeONEProductToCart, cantidadXCarro } = useContext(CartContext)
+    const { addProductToCart, cartProducts, clear, removeProductToCart, quantitiSelected, setQuantitiSelected , setCantidadXCarro, removeONEProductToCart, cantidadXCarro } = useContext(CartContext)
 
     const { id, title, description, image, category, filtradito, price, qty, stock } = cartProducts
 

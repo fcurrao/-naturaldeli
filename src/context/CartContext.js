@@ -7,7 +7,7 @@ const CartProvider = ({ children }) => {
 
     const [cantidadXCarro, setCantidadXCarro] = useState(0)
     const [cartProducts, setCartProducts] = useState([])
-
+    const [quantitiSelected, setQuantitiSelected] = useState(0)
 
 
     const removeProductToCart = (product) => {
@@ -103,7 +103,9 @@ const CartProvider = ({ children }) => {
         removeProductToCart,
         removeONEProductToCart,
         addProductToCart,
-        clear
+        setQuantitiSelected,
+        clear,
+        quantitiSelected
     }
 
 

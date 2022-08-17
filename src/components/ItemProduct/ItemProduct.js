@@ -17,18 +17,20 @@ const ItemProduct = ({ data }) => {
 
     // const {yd, categorias} = useParams()
     const { id, title, description, image, category, filtradito, price, stock } = data
+    const { addProductToCart, cartProducts, clear, removeProductToCart, quantitiSelected, setQuantitiSelected , setCantidadXCarro, removeONEProductToCart, cantidadXCarro } = useContext(CartContext)
 
     // const {id, categorias} = useParams()
 
 
 
     const onSubmitDetalle = (e) => {
-        e.stopPropagation()
+        e.preventDefault()
+        // e.stopPropagation()
         console.log("Tocaste Boton   detalle producto")
         // <Modal />
 
     }
-
+ 
 
 
     const onSubmitComprar = () => {
@@ -43,8 +45,7 @@ const ItemProduct = ({ data }) => {
 
     return (
         <div>
-            <Link to={`/productos/${id}`}>
-
+      
                 <div className="item-product margin hoverr">
                     <img src={`../assets/img/${image}`} alt="Imagen producto" />
                     {/* {namee} */}
@@ -55,16 +56,21 @@ const ItemProduct = ({ data }) => {
                         <p className='description2'>{description}</p>
                         <span className="btn2 btn btn-primary">$ {price}</span><br></br>
                         <p className='red' > 12 cuotas de {en12cuotas}</p>
+                      
+
+                        <ItemCount  productData={data} stock={stock} initial={1} />
+                       <p className='chiquito1'>stock disponible: {stock}</p>
+                       <Link to={`/productos/${id}`}>
 
                         <div>
-                            <button className="btn btn-group2 bttn" onClick={onSubmitDetalle}>Detalle Producto</button>
+                            <button className="btn btn-group2 bttn"  >Detalle Producto</button>
                           
                         </div>
+                        </Link>
                     </div>
                 </div>
 
-            </Link>
-
+            
         </div>
     )
 }

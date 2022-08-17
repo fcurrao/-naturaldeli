@@ -9,12 +9,15 @@ import ItemDetail from "../ItemDetail/ItemDetail"
 import db from "../../firebaseConfig"
 import { doc, getDoc } from "firebase/firestore"
 import { async } from "@firebase/util"
-
+import { useContext } from 'react'
+import CartProvider, { CartContext } from '../../context/CartContext'
 
 const ItemDetailContainer = ({ }) => {
 
     const { id } = useParams()
     const [productData, setProductData] = useState([])
+    const { addProductToCart, cartProducts, clear, removeProductToCart, quantitiSelected, setQuantitiSelected , setCantidadXCarro, removeONEProductToCart, cantidadXCarro } = useContext(CartContext)
+
 
     // filterById()
     useEffect( () => {

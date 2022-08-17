@@ -14,9 +14,10 @@ import Modal from '../Modal/Modal'
 const ItemDetail = ({ data }) => {
     
     const { id, title, description, image,image2,image3, qty,category, filtradito, price, stock } = data
-    const {cartProducts,addProductToCart,setCantidadXCarro,cantidadXCarro} = useContext(CartContext)
+    const { addProductToCart, cartProducts, clear, removeProductToCart, quantitiSelected, setQuantitiSelected , setCantidadXCarro, removeONEProductToCart, cantidadXCarro } = useContext(CartContext)
+ 
+    
     const [imagensita, setImagensita] = useState('')
-    const [quantitiSelected, setQuantitiSelected] = useState(0)
     const [fotoGrande , setFotoGrande] = useState(1)
     const [modaleState , setModalState] = useState(false)
     
@@ -123,7 +124,7 @@ const ItemDetail = ({ data }) => {
                        </>                           
                             : 
                             <>
-                       <ItemCount productData={data} quantitiSelected={quantitiSelected} setQtySelect={setQuantitiSelected} stock={stock} initial={1} />
+                       <ItemCount productData={data}  stock={stock} initial={1} />
                        <p className='chiquito1'>stock disponible: {stock}</p>
                        </>    
                    }

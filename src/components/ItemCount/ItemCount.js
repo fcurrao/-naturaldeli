@@ -3,11 +3,13 @@ import {useState} from 'react'
 import CartProvider, { CartContext } from '../../context/CartContext'
 import { useContext } from 'react'
 
-const ItemCount = ({productData,stock,initial,quantitiSelected,setQtySelect}) => {
+const ItemCount = ({productData,stock,initial}) => {
 
-    const {cartProducts,addProductToCart,setCantidadXCarro,cantidadXCarro} = useContext(CartContext)
-    const qty = quantitiSelected;
+    const { addProductToCart, cartProducts, clear, removeProductToCart, setQuantitiSelected , setCantidadXCarro, removeONEProductToCart, cantidadXCarro } = useContext(CartContext)
+     
+    setQuantitiSelected(0)
     const [counter, setCounter] = useState(initial) 
+
     const addNumber = () => {
         if (stock > counter){
             setCounter(counter + 1)
@@ -19,11 +21,10 @@ const ItemCount = ({productData,stock,initial,quantitiSelected,setQtySelect}) =>
 
 
     const onAdd = () =>{
-        setQtySelect(counter)
+        setQuantitiSelected(counter)
         setCantidadXCarro(counter)
         addProductToCart(productData,counter)
-        console.log("producto: ",productData)
-        console.log("cantidad: ",qty)
+        console.log("producto: ",productData) 
         console.log("aaa: ,", cantidadXCarro)
     }
 

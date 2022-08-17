@@ -8,7 +8,14 @@
 .lgrande{
 font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 color:darkslategrey;
+
 }
+
+
+#dossectordiv{
+margin-left: 250px !important;
+}
+
 
 .letritas{
     font-family: "Proxima Nova",-apple-system,Roboto,Arial,sans-serif,sans-serif;
@@ -59,7 +66,7 @@ color: rgb(51,51,51,.6) !important;
 
 #dossector{
     display: flex;
-    padding-left: 800px !important;
+    padding-left: 300px !important;
 
     justify-content: flex-end;
     flex-wrap: wrap;
@@ -67,3 +74,25 @@ color: rgb(51,51,51,.6) !important;
     flex-direction: row;
     text-align: end;
 }
+ 
+
+
+
+
+
+.dropdown-menu2{
+    position: absolute;
+    left: -5% !important;
+}
+
+    .dropdown-menu {
+        position: absolute;
+        left: -5% !important;
+    }
+
+
+    .dropdown-menu.show2 {
+        width: min-content!important ;
+        display: block !important;
+        left: -5% !important;
+        }

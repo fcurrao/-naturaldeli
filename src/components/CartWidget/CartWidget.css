@@ -59,7 +59,7 @@
 .ajam{
     width: min-content;
     display: block !important;
-    left: -600% !important;
+    left: -5% !important;
 }
 
 .item-productx{
@@ -102,3 +102,17 @@
     margin-left: 10px;
 }
  
+
+.dropdown-menu.show {
+width: min-content!important ;
+display: block !important;
+left: -5% !important;
+}
+
+
+
+.dropdown-menu.show2 {
+    width: min-content!important ;
+    display: block !important;
+    left: -5% !important;
+    }

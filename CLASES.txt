@@ -542,7 +542,20 @@ const getLog = async()=> {
 }
 
 
+*************   funcion async ?? await
 
+
+La finalidad de las funciones async / await
+ es simplificar el comportamiento del uso
+  síncrono de promesas y realizar algún 
+  comportamiento específico en un grupo de Promises .
+
+--- ejemplo::
+
+funcion async NOMBRE(){
+  const ALGO = await EJECUTAoTRAfUNCION()
+  // osea la funcion asyncronica NOMBRE se ejecuta cuando await ( ESPERA) que se haga primero la EJECUTAoTRAfUNCION
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1217,7 +1230,17 @@ de la card (añadir a carro) / deberia parar la propagacion y ir
 al link de añadir al carro.
 
 
+-------------------------------------
+* preventDefault()
+ 
+preventDefault
 
+
+-------------------------------------
+
+
+     e.preventDefault()
+        // e.stopPropagation()
 
 
 
