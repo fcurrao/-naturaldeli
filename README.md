@@ -19,7 +19,11 @@ This is the site of a small local market. Where they sell healthy products.
 
 
 
-![image](https://github.com/fcurrao/-naturaldeli/blob/main/PRIMERA-ENTREGA-federico-Currao.gif.gif) 
+
+https://user-images.githubusercontent.com/68132577/185184777-bd95e19e-d419-40ba-b337-1ea8d14927d6.mp4
+
+
+
 
 ![image](https://github.com/fcurrao/-naturaldeli/blob/main/public/assets/img/tiendadeli.jpg)
 
