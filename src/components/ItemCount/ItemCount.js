@@ -2,6 +2,7 @@ import './ItemCount.css'
 import {useState} from 'react'
 import CartProvider, { CartContext } from '../../context/CartContext'
 import { useContext } from 'react'
+import swal from 'sweetalert';
 
 const ItemCount = ({productData,stock,initial}) => {
 
@@ -19,6 +20,9 @@ const ItemCount = ({productData,stock,initial}) => {
             setCounter(counter - 1)
     }}
 
+    const alertAgregando = () =>{
+        swal("Genial..", "Los Item se agregaron a tu carrito");
+    }
 
     const onAdd = () =>{
         setQuantitiSelected(counter)
@@ -26,6 +30,7 @@ const ItemCount = ({productData,stock,initial}) => {
         addProductToCart(productData,counter)
         console.log("producto: ",productData) 
         console.log("aaa: ,", cantidadXCarro)
+        alertAgregando()
     }
 
 
