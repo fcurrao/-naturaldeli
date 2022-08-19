@@ -1684,11 +1684,28 @@ export const uploadCollectionItems = async (arrayProducts, nameCollection) => {
 
 **********************************************************
 ***************************************
-CLASE 12 | 
+CLASE 12 |  FIREBASE 2 
 ***************************************
 **********************************************************
 
+REPASAR TODO FIREBASE 
+COMO TRAER LA BASE DE DATO ??
+COMO ACTUALIZAR Y BORRAR DATOS ??
 
+
+
+formulario: para firebase 
+
+ const handleChange = (e) => {
+    console.log("valor ingresado por el usuario, TARGET : ", e.target)
+    setFormdata({[e.target.name] : e.target.value})
+ }
+
+
+
+
+
+<
 **********************************************************
 ***************************************
 CLASE 13 | 

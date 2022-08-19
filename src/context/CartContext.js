@@ -8,7 +8,7 @@ const CartProvider = ({ children }) => {
     const [cantidadXCarro, setCantidadXCarro] = useState(0)
     const [cartProducts, setCartProducts] = useState([])
     const [quantitiSelected, setQuantitiSelected] = useState(0)
-
+    const [totalPrice, setTotalPrice] = useState(0)
 
     const removeProductToCart = (product) => {
 
@@ -49,6 +49,7 @@ const CartProvider = ({ children }) => {
 
 
     const addProductToCart = (product, qty) => {
+        setTotalPrice(totalPrice + product.price)
         setCantidadXCarro(cantidadXCarro + qty)
         if (cartProducts.some(uno => uno.id == product.id)) {
 
@@ -105,6 +106,7 @@ const CartProvider = ({ children }) => {
         addProductToCart,
         setQuantitiSelected,
         clear,
+        totalPrice,
         quantitiSelected
     }
 
