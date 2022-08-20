@@ -17,6 +17,18 @@
 z-index: -1;
 }
 
+
+.item-product22 {
+    width: 1100px;
+    height: 980px;
+}
+.imgzoom{
+    margin: 5px !important;
+    width: 90%;
+    height: 90%;
+}
+
+
 .foti{
     cursor: pointer;
     width: 100%;
@@ -59,10 +71,10 @@ background: none;
 }
 
 .item-product-zoom img{
-    width: 100%;
-    margin-top: 300px;
-    margin-left: 500px;
-    padding: 50px;
+    width: 120%;
+    margin-top: 70px;
+    margin-left: 830px;
+    padding: 10px;
     zoom: 90%;
 }
 
@@ -77,9 +89,9 @@ background: none;
     
     width: 500px;
     display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
+    flex-direction: column;
+    align-content: stretch;
+    justify-content: flex-start;
     align-items: stretch;
     zoom: 110% !important;
     flex-wrap: wrap;

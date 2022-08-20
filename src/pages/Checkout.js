@@ -13,10 +13,12 @@ import { useState } from 'react'
 import db from '../firebaseConfig'
 import { collection, addDoc } from 'firebase/firestore'
 
+import swal from 'sweetalert';
 
 
 const Checkout = () => {
-
+    let total = 0
+    let subtotal = 0
     const { addProductToCart, cartProducts, clear, removeProductToCart, quantitiSelected, setQuantitiSelected , setCantidadXCarro, removeONEProductToCart, cantidadXCarro } = useContext(CartContext)
     const { id, title, description, image, category, filtradito, price, qty, stock } = cartProducts
     const {totalPrice} = useContext(CartContext)
@@ -34,7 +36,7 @@ const Checkout = () => {
         })),
         buyer:{  },
         date: new Date().toLocaleString(),
-        total: cantidadXCarro
+        total: totalPrice
     }) 
 
 
@@ -57,10 +59,16 @@ const Checkout = () => {
 
 
 const submitData = (e) =>{ 
+    console.log("formData.email 1y2 : ",formData.email , formData.email2)
+    if(formData.email == formData.email2){
     e.preventDefault()
     console.log("order para enviar:", {...order, buyer: formData})
     pushDatatoFireabase({...order,buyer: formData})
-
+} else {
+    e.preventDefault() 
+    
+swal("Los emails no coinciden");  
+}
 }
 
 const pushDatatoFireabase = async (newOrder) => {
@@ -79,8 +87,7 @@ const pushDatatoFireabase = async (newOrder) => {
     
     // TOTAL  tiene que ser un parametro que me lo pase la pagina...
 
-    let total = 0
-    let subtotal = 0
+
 
 
     console.log("Productos::: ", cartProducts)
@@ -186,27 +193,76 @@ const pushDatatoFireabase = async (newOrder) => {
                         <p> Id de compra {succes}</p>
 
                         </> : <>
-                        <h3>Formulario </h3>
+                        <h3>Formulario de compra</h3>
                         <form onSubmit={submitData}>
-                            <input type='text' 
+                             Name<input className='inputt' type='text' 
                             name='name' 
                             placeholder='nombre'
                              value={formData.name}
-                            onChange={handleChange}/>
+                            onChange={handleChange}/><br />
 
-                            <input type='number' 
+
+ 
+                             Apellido <input className='inputt' type='text' 
+                            name='apellido' 
+                            placeholder='apellido'
+                             value={formData.apellido}
+                            onChange={handleChange}/><br />
+
+                            Phone<input  className='inputt' type='number' 
                             name='phone' 
                             placeholder='telefono'
                              value={formData.phone}
-                             onChange={handleChange}/>
+                             onChange={handleChange}/><br />
 
-                            <input type='email' 
+                            Card<input  className='inputt' type='number' 
+                            name='card' 
+                            placeholder='card'
+                            //  value={formData.phone}
+                            //  onChange={handleChange}
+                            /><br />
+
+                           Card-Code<input  className='inputt' type='number' 
+                            name='code' 
+                            placeholder='card-code'
+                            //  value={formData.phone}
+                            //  onChange={handleChange}
+                            /><br />
+
+                            Adress<input  className='inputt' type='text' 
+                            name='direccion' 
+                            placeholder='direccion'
+                              //  value={formData.phone}
+                            //  onChange={handleChange}
+                            /><br />
+
+
+                            Other<input  className='inputt' type='text' 
+                            name='otro' 
+                            placeholder='otro'
+                             //  value={formData.phone}
+                            //  onChange={handleChange}
+                            /><br />
+
+    
+                            Email<input className='inputt'  type='email' 
                             name='email' 
                             placeholder='correo electronico'
                             value={formData.email}
-                            onChange={handleChange}/>
+                            onChange={handleChange}/> <br />
 
-                        <button type="submit" > Enviar</button>
+                            Check Email<input className='inputt'  type='email' 
+                            name='email2' 
+                            placeholder='Confirme correo electronico'
+                            value={formData.email2}
+                            onChange={handleChange}/><br />
+
+
+                            
+                        {(formData.name != "" && formData.apellido != "" && formData.phone  != "" && formData.email != "") ? 
+                           <button type="submit" > Enviar</button>
+                            : <></>}
+                        
                         
                         </form></>}
                     </Modal>}

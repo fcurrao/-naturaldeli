@@ -29,6 +29,7 @@ const CartProvider = ({ children }) => {
     const clear = () => {
         setCartProducts([])
         setCantidadXCarro(0)
+        setTotalPrice(0)
     }
 
     const isInCart = (id) => {
@@ -37,7 +38,7 @@ const CartProvider = ({ children }) => {
             return (
                 console.log("TRUE")
             )
-
+                
         } else {
             console.log("FALSE")
         }
@@ -49,7 +50,8 @@ const CartProvider = ({ children }) => {
 
 
     const addProductToCart = (product, qty) => {
-        setTotalPrice(totalPrice + product.price)
+        let subtotal2 = product.price * qty 
+        setTotalPrice(totalPrice + subtotal2)
         setCantidadXCarro(cantidadXCarro + qty)
         if (cartProducts.some(uno => uno.id == product.id)) {
 

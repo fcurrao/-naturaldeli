@@ -16,7 +16,7 @@ const ItemDetail = ({ data }) => {
     const { id, title, description, image,image2,image3, qty,category, filtradito, price, stock } = data
     const { addProductToCart, cartProducts, clear, removeProductToCart, quantitiSelected, setQuantitiSelected , setCantidadXCarro, removeONEProductToCart, cantidadXCarro } = useContext(CartContext)
  
-    
+    const { categoryid, todos } = useParams()
     const [imagensita, setImagensita] = useState('')
     const [fotoGrande , setFotoGrande] = useState(1)
     const [modaleState , setModalState] = useState(false)
@@ -72,6 +72,8 @@ const ItemDetail = ({ data }) => {
             }
 
     return (
+        <>
+        { id != null ?      <>  
         <div className="item-product-zoom">
             <div className='fotitos'>
             <button  className="foti zindexabajo" onClick={onSubmitChangePicture1}> <img  src={`../assets/img/${image}`} alt="Imagen producto" /></button> 
@@ -128,12 +130,26 @@ const ItemDetail = ({ data }) => {
                        <p className='chiquito1'>stock disponible: {stock}</p>
                        </>    
                    }
-                     { modaleState &&  <Modal data={data} setModalState={setModalState} imagensita={imagensita}/>  }
+                     { modaleState &&  <Modal className="custom2" data={data} setModalState={setModalState} imagensita={imagensita}>
+                      
+                     <div className="item-product22"  >
+                     <h2>{title}</h2>
+                      <img className="imgzoom" src={`../assets/img/${imagensita}`}  alt="Imagen producto" /> 
+                    
+                        </div>
+                         </Modal>  }
                  
                 </div>
             </div>
         </div>
+        </> : <><h1>NO EXISTE ESTE PRODUCTO</h1></> }
 
+
+
+
+
+
+</>
     )
 }
 

@@ -8,6 +8,17 @@
  width: 80%;
 }
 
+.productboton{
+    left: 50%; 
+    z-index: 2;
+    position: initial; 
+    width: 20%;
+    height: 56px; 
+    background-color: black !important;
+    border-radius: 0rem !important;
+    color: white;
+}
+
 .titulo{
     text-decoration: overline;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -50,7 +61,10 @@
 }
 
 
-
+.inputt{
+    padding: 5px;
+    margin: 10px;
+}
 
 .margin4{
     width: 18%;

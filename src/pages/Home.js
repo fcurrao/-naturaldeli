@@ -1,6 +1,8 @@
 
 import ItemListContainer from "../components/ItemListContainer/ItemListContainer"
 import "../pages/pages.css"
+import { Link } from 'react-router-dom'
+
 
 const home = () => {
 
@@ -10,6 +12,13 @@ return (
 
 <section className="centrado">
 <h1 className="titulo"> BIENVENIDOS A NATURAL DELI</h1>
+
+
+
+<Link to={`/productos`}> 
+<button className="productboton" >  VER TODOS NUESTROS PRODUCTOS </button>
+   </Link> 
+
 
 
 <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="true">
@@ -38,8 +47,6 @@ return (
     <span className="visually-hidden letrasGaleria next ">Next →→</span>
     </a>
 </div>
-
-
 
 
 

@@ -43,6 +43,7 @@ const ItemProduct = ({ data }) => {
     const en12cuotasSub = (price / 12);
     const en12cuotas = en12cuotasSub.toFixed(2);
 
+    
     return (
         <div>
       
