@@ -4,23 +4,36 @@ import { Link } from 'react-router-dom'
 import { collection, addDoc } from 'firebase/firestore'
 import { useState } from 'react'
 import Modal from '../Modal/Modal';
-
+import swal from 'sweetalert';
 
 const NavBar = () => {
 
 
   const [busqueda, setbusqueda] = useState()
-  const [showModal, setShowModal] = useState(false)
-  // const [userOK, setUserOK] = useState()
-//   const [formDataUser, setFormdataUser] = useState({
-//     password : '',
-//     email : ''
-// }) 
+  const [showLogin, setShowLogin] = useState(false) 
+   const [showModal, setShowModal] = useState(false)
+   
+   const [showSalir,  setShowSalir] = useState(false)
+
+  const [showRegistrarse, setShowRegistrarse] = useState(false)
+  const [userOK, setUserOK] =useState({
+    password : '',
+    password2 : '',
+    email : '' ,
+    email2 : ''
+}) 
+  const [formDataUser, setFormdataUser] = useState({
+    password : '',
+    password2 : '',
+    email : '' ,
+    email2 : ''
+}) 
  
 
-
-
-
+ 
+const registrarse = () => {
+  setShowRegistrarse(true)
+}
 
 
   // const ingresaNewUser = async (newUser) => {
@@ -33,7 +46,8 @@ const NavBar = () => {
 
  const  handleChange = (e) => {
   console.log("e.target.name", e.target.name, e.target.value)
-  // setFormdataUser({...formDataUser,[ e.target.name] : e.target.value})
+  setFormdataUser({...formDataUser,[ e.target.name] : e.target.value})
+  setUserOK({...userOK,[ e.target.name] : e.target.value})
   }
 
   // const ingresaNewUser = () => {
@@ -41,10 +55,46 @@ const NavBar = () => {
   //   // console.log("aveeeeeeeeeeeeeeer" , formDataUser, formDataUser.email, formDataUser.password)
 
   // }
-  
+
+  const consoleslogeos = () => {
+    console.log(" LAST userOK : ",userOK)
+    console.log("LAST  formDataUser : ", formDataUser)
+  }
+
+  const ingresaNewUser = (e) =>{ 
+    console.log("formData.email 1y2 : ",formDataUser.email , formDataUser.email2, formDataUser.password)
+    console.log("userOK : ",userOK)
+    setFormdataUser([])  
+    console.log("formDataUser : ", formDataUser)
+    setShowLogin(true)
+
+
+    setShowModal(false)
+    setShowRegistrarse(false)
+    
+
+    e.preventDefault() 
+  }
 
 
 
+
+
+  const ingresaRegistro = (e) =>{
+
+    if(formDataUser.password == formDataUser.password2){
+      setFormdataUser({...formDataUser,[ e.target.name] : e.target.value})
+      setUserOK({...userOK,[ e.target.name] : e.target.value})
+      e.preventDefault()
+      ingresaNewUser() 
+      setShowLogin(true)
+    } else {
+      e.preventDefault() 
+    
+      swal("Las contraseñas no coinciden"); 
+
+    }
+  }
   // ingresaNewUser({formDataUser})
 
 
@@ -61,6 +111,23 @@ const NavBar = () => {
   const ingresarQ = () =>{
     setShowModal(true)
   }
+
+
+  const  salirQ = () =>{
+    setShowSalir(true)
+  }
+ 
+
+  const cerrarSesion = () => {
+    setFormdataUser([]) 
+    setUserOK([])
+    setShowSalir(false)
+    setShowLogin(false)
+    // e.preventDefault()
+  }
+
+
+
 
   const buscandoInput = (e) =>{
     setbusqueda(e.target.value)
@@ -157,18 +224,40 @@ const enviarbusqueda = () => {
           </div>
           <div  id="dossectordiv">
 
-<botton className="nav-link disabled btn3 lgrande" href="index.html" onClick={ingresarQ}>Log In  </botton>
 
+           
+          
+          {showLogin ? <>  
+               
+          {console.log("xxxxxx", userOK.email)}
+                    <botton className="nav-link disabled btn3 lgrande" href="index.html" onClick={salirQ}> {userOK.email}  </botton>
+
+                    {showSalir &&  <Modal title="Datos de contacto" setModalState={() => setShowSalir(false)} >
+
+          <h2> Usuario: {userOK.name}  </h2><br></br>
+          <h2> Email: {userOK.email}  </h2><br></br>
+          
+          <botton className="nav-link disabled btn3 lgrande" href="index.html" onClick={cerrarSesion}> CERRAR SESION  </botton>
+          </Modal> }
+
+
+
+                    </>  :<>  
+
+         
+                    {console.log("xxxxxx", userOK.email)}
+          <botton className="nav-link disabled btn3 lgrande" href="index.html" onClick={ingresarQ}>Log In  </botton>
+      </>
+}
 
 {showModal &&  <Modal title="Datos de contacto" setModalState={() => setShowModal(false)}>
 <h3>Formulario de compra</h3>
-                        <form 
-                        // onSubmit={ingresaNewUser}
+                        <form    onSubmit={ingresaNewUser}
                         >
                              email<input className='inputt' type='email' 
                             name='email' 
                             placeholder='email'
-                            //  value={formDataUser.email}
+                             value={formDataUser.email}
                             onChange={handleChange}
                             />
                             <br />
@@ -178,16 +267,87 @@ const enviarbusqueda = () => {
                              Apellido <input className='inputt' type='password' 
                             name='password' 
                             placeholder='password'
-                              // value={formDataUser.password}
+                              value={formDataUser.password}
                             onChange={handleChange}
                             />
                             <br />
                             <button type="submit" > Enviar</button>
 
                             </form>
-                            <button  > REGISTRATE POR PRIMERA VEZ</button>
-  
+                            {consoleslogeos()}
+                            <button  onClick={() => registrarse()} > REGISTRATE POR PRIMERA VEZ</button>
+
+                            
+
+
   </Modal>}
+  {showRegistrarse &&  <Modal title="Datos de contacto" setModalState={() => setShowRegistrarse(false)} >
+<h1>BIENVENIDO</h1>
+<h1>Ingrese los datos</h1>
+<form    onSubmit={ingresaRegistro}
+                        >
+
+
+                          name<input className='inputt' type='text' 
+                            name='name' 
+                            placeholder='name'
+                            //  value={formDataUser.name}
+                            onChange={handleChange}
+                            />
+                            <br />
+
+
+                            phone<input className='inputt' type='number' 
+                            name='phone' 
+                            placeholder='phone'
+                            //  value={formDataUser.phone}
+                            onChange={handleChange}
+                            />
+                            <br />
+
+
+                             adress<input className='inputt' type='text' 
+                            name='adress' 
+                            placeholder='adress'
+                            //  value={formDataUser.adress}
+                            onChange={handleChange}
+                            />
+                            <br />
+
+                            email<input className='inputt' type='email' 
+                            name='email' 
+                            placeholder='email'
+                             value={formDataUser.email}
+                            onChange={handleChange}
+                            />
+                            <br />
+
+
+ 
+                             password <input className='inputt' type='password' 
+                            name='password' 
+                            placeholder='password'
+                              value={formDataUser.password}
+                            onChange={handleChange}
+                            />  <br />
+
+
+                              password2 <input className='inputt' type='password' 
+                            name='password2' 
+                            placeholder='password chek'
+                              value={formDataUser.password2}
+                            onChange={handleChange}
+                            />
+
+                            <br />
+                            <button type="submit" > Enviar</button>
+
+                            </form>
+                            {consoleslogeos()}
+</Modal>}
+
+{consoleslogeos()}
+
 
 <Link to="/cart" className="nav-link disabled btn3 ccc lgrande" href="index.html">Ir a Mi carrito </Link>
 
