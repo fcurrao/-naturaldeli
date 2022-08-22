@@ -64,8 +64,6 @@ const NavBar = () => {
 
   const buscandoInput = (e) =>{
     setbusqueda(e.target.value)
-
- 
     console.log( "1 o  2  :", e.target.value)
   }
 
@@ -167,7 +165,7 @@ const enviarbusqueda = () => {
                         <form 
                         // onSubmit={ingresaNewUser}
                         >
-                             Name<input className='inputt' type='email' 
+                             email<input className='inputt' type='email' 
                             name='email' 
                             placeholder='email'
                             //  value={formDataUser.email}
@@ -187,6 +185,7 @@ const enviarbusqueda = () => {
                             <button type="submit" > Enviar</button>
 
                             </form>
+                            <button  > REGISTRATE POR PRIMERA VEZ</button>
   
   </Modal>}
 

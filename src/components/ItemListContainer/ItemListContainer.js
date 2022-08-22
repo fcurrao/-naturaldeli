@@ -17,16 +17,16 @@ const ItemListContainer = ({ secciones }) => {
 
 
     
-    const getItem = async () => {
-        const productCollection = collection(db , 'products')
-        const productSnapshot = await getDocs(productCollection)
+    // const getItem = async () => {
+    //     const productCollection = collection(db , 'products')
+    //     const productSnapshot = await getDocs(productCollection)
 
-        const productList = productSnapshot.docs.map((doc)=>{
-            let product = doc.data()
-            product.id = doc.id
-            return product
-        })
-    }
+    //     const productList = productSnapshot.docs.map((doc)=>{
+    //         let product = doc.data()
+    //         product.id = doc.id
+    //         return product
+    //     })
+    // }
   
 
     //     // const filterByCategory = productList
@@ -46,40 +46,40 @@ const ItemListContainer = ({ secciones }) => {
     
     
     
-    useEffect(() => {
-        getItem()
-        .then((res)=> {
-            setListProducts(res)
+//     useEffect(() => {
+//         getItem()
+//         .then((res)=> {
+//             setListProducts(res)
             
-       })
+//        })
 
-}, [categoryid])
-
-
+// }, [categoryid])
 
 
 
-//        useEffect(()=>{
-//        const queryCollection = collection(db,"products") 
+
+
+       useEffect(()=>{
+       const queryCollection = collection(db,"products") 
        
-//        if (categoryid){
-//            const queryFilter= query(queryCollection, where("category" , "==", categoryid))
-//            getDocs(queryFilter)
-//            .then(res =>setListProducts (res.docs.map((uno)=>{
-//                     let product = uno.data()
-//                     product.id = uno.id
-//                     return product
-//                 })))
-//        }else{
-//        getDocs(queryCollection)
-//        .then(res =>setListProducts (res.docs.map((uno)=>{
-//         let product = uno.data()
-//         product.id = uno.id
-//         return product
-//     })))
+       if (categoryid){
+           const queryFilter= query(queryCollection, where("category" , "==", categoryid))
+           getDocs(queryFilter)
+           .then(res =>setListProducts (res.docs.map((uno)=>{
+                    let product = uno.data()
+                    product.id = uno.id
+                    return product
+                })))
+       }else{
+       getDocs(queryCollection)
+       .then(res =>setListProducts (res.docs.map((uno)=>{
+        let product = uno.data()
+        product.id = uno.id
+        return product
+    })))
         
-//        }
-//    },[categoryid])
+       }
+   },[categoryid])
 
 
 
