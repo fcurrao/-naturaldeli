@@ -146,3 +146,53 @@ padding-left: 10%;
 .bttn{
     margin-right: 10px;
 }
+
+.zoomosetentaycinco{
+    zoom: 75%
+}
+
+.inputtbig{
+width: 400px;
+height: 200px;
+}
+
+
+.formulario{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-right: 220px;
+}
+
+.mediapag {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding-bottom: 40px;
+}
+
+.imagen {
+width: 50%;
+}
+
+.imagen img{     width: 90% !important;}
+
+.texto{
+    font-size: 16px;
+    padding-left: 80px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding-right: 20px;
+        line-height: 1.8;
+width: 50%;
+}
+
+.subtexto{
+        font-size: 20px;
+        line-height: 1.6;
+}

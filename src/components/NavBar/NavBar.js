@@ -243,7 +243,7 @@ const enviarbusqueda = () => {
           
 
           <Link to="/usuario" className="dropdown-item letritas" href="#">
-          <botton className="nav-link disabled btn3 lgrande" href="#" onClick={salirQ2}> Mis compras </botton>
+          <botton className="nav-link disabled btn3 lgrande" href="#" onClick={salirQ2}> Mis compras - Perfil </botton>
           </Link>
 
 
