@@ -1,11 +1,9 @@
 import './NavBar.css'
 import CartWidget from '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom'
-import db from '../../firebaseConfig'
 import { collection, addDoc } from 'firebase/firestore'
 import { useState } from 'react'
 import Modal from '../Modal/Modal';
-import { experimentalStyled } from '@mui/material';
 
 
 const NavBar = () => {
@@ -13,11 +11,11 @@ const NavBar = () => {
 
   const [busqueda, setbusqueda] = useState()
   const [showModal, setShowModal] = useState(false)
-  const [userOK, setUserOK] = useState()
-  const [formDataUser, setFormdataUser] = useState({
-    password : '',
-    email : ''
-}) 
+  // const [userOK, setUserOK] = useState()
+//   const [formDataUser, setFormdataUser] = useState({
+//     password : '',
+//     email : ''
+// }) 
  
 
 
@@ -26,23 +24,23 @@ const NavBar = () => {
 
 
   // const ingresaNewUser = async (newUser) => {
-  //     // const collectionOrder = collection(db, 'users')
-  //     //  const userDoc = await addDoc(collectionOrder, newUser)
-  //     //  setUserOK(userDoc.email)
-  //     await console.log("aveeeeeeeeeeeeeeer" , formDataUser, formDataUser.email, formDataUser.password)
+  //     const collectionOrder = collection(db, 'users')
+  //      const userDoc = await addDoc(collectionOrder, newUser)
+  //      setUserOK(userDoc.email)
+  //     // await console.log("aveeeeeeeeeeeeeeer" , formDataUser, formDataUser.email, formDataUser.password)
 
   // }
 
  const  handleChange = (e) => {
   console.log("e.target.name", e.target.name, e.target.value)
-  setFormdataUser({...formDataUser,[ e.target.name] : e.target.value})
+  // setFormdataUser({...formDataUser,[ e.target.name] : e.target.value})
   }
 
-  const ingresaNewUser = () => {
-    console.log("xxx",formDataUser)
-    // console.log("aveeeeeeeeeeeeeeer" , formDataUser, formDataUser.email, formDataUser.password)
+  // const ingresaNewUser = () => {
+  //   console.log("xxx",formDataUser)
+  //   // console.log("aveeeeeeeeeeeeeeer" , formDataUser, formDataUser.email, formDataUser.password)
 
-  }
+  // }
   
 
 
@@ -98,8 +96,10 @@ const enviarbusqueda = () => {
         <sector id="unosector">
         < div id="unosectordiv">
           <div className='sinborde'>
-            <input className='sinborde inputsito' type='text' placeholder="Buscar productos, marcas y más…"  onChange={buscandoInput} ></input>
-            <button  onClick={enviarbusqueda}  >SEARCH</button>
+            <input className='sinborde inputsito' type='text' placeholder="Buscar productos, marcas y más…" onChange={buscandoInput}  ></input>
+            
+            <button onClick={enviarbusqueda}   >SEARCH</button>
+            
           </div>
           </div>
           < div id="unosectordivdos">
@@ -161,15 +161,16 @@ const enviarbusqueda = () => {
 
 <botton className="nav-link disabled btn3 lgrande" href="index.html" onClick={ingresarQ}>Log In  </botton>
 
+
 {showModal &&  <Modal title="Datos de contacto" setModalState={() => setShowModal(false)}>
 <h3>Formulario de compra</h3>
                         <form 
-                        onSubmit={ingresaNewUser}
+                        // onSubmit={ingresaNewUser}
                         >
                              Name<input className='inputt' type='email' 
                             name='email' 
                             placeholder='email'
-                             value={formDataUser.email}
+                            //  value={formDataUser.email}
                             onChange={handleChange}
                             />
                             <br />
@@ -179,7 +180,7 @@ const enviarbusqueda = () => {
                              Apellido <input className='inputt' type='password' 
                             name='password' 
                             placeholder='password'
-                              value={formDataUser.password}
+                              // value={formDataUser.password}
                             onChange={handleChange}
                             />
                             <br />

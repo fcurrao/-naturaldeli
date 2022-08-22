@@ -3,8 +3,8 @@ import ItemListContainer from "../components/ItemListContainer/ItemListContainer
 import "../pages/pages.css"
 import { Link } from 'react-router-dom'
 
-
 const home = () => {
+
 
 
 return (
