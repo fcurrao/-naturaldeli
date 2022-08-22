@@ -118,6 +118,10 @@ const registrarse = () => {
   }
  
 
+  const  salirQ2 = () =>{
+    setShowSalir(false)
+  }
+
   const cerrarSesion = () => {
     setFormdataUser([]) 
     setUserOK([])
@@ -237,7 +241,14 @@ const enviarbusqueda = () => {
           <h2> Usuario: {userOK.name}  </h2><br></br>
           <h2> Email: {userOK.email}  </h2><br></br>
           
+
+          <Link to="/usuario" className="dropdown-item letritas" href="#">
+          <botton className="nav-link disabled btn3 lgrande" href="#" onClick={salirQ2}> Mis compras </botton>
+          </Link>
+
+
           <botton className="nav-link disabled btn3 lgrande" href="index.html" onClick={cerrarSesion}> CERRAR SESION  </botton>
+         
           </Modal> }
 
 
@@ -251,7 +262,7 @@ const enviarbusqueda = () => {
 }
 
 {showModal &&  <Modal title="Datos de contacto" setModalState={() => setShowModal(false)}>
-<h3>Formulario de compra</h3>
+<h3>Formulario de Usuario</h3>
                         <form    onSubmit={ingresaNewUser}
                         >
                              email<input className='inputt' type='email' 
