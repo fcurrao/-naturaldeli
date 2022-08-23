@@ -42,6 +42,19 @@ And clearly you will be able to buy them.\
 Made with Apis and backEnd-mock.\
 On the page you can log in to save your carts.
 
+
+```flow
+st=>start: Login
+op=>operation: Login operation
+cond=>condition: Successful Yes or No?
+e=>end: To admin
+
+st->op->cond
+cond(yes)->e
+cond(no)->op
+```
+
+
 ## Available Scripts
 
 In the project directory, you can run:
