@@ -4,7 +4,7 @@
 
 This project was bootstrapped with [Create React App] 
 
-#The client requested an ecommerce for his premises
+#The client requested an ecommerce for his company
                     
 ## Guia
                     
