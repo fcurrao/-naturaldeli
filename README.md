@@ -8,10 +8,10 @@ This project was bootstrapped with [Create React App]
                     
 ## Guia
                     
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell 
+Tecnologias Front  | Tecnologias Back
+------------------ | ------------------
+HTML+CSS+Js        |    Node js
+React JS           |    Firebase 
 
 
 ## Previews:
@@ -42,6 +42,7 @@ On the page you can see the products, filtered by offer, price, categories, thei
 And clearly you will be able to buy them.\
 Made with Apis and backEnd-mock.\
 On the page you can log in to save your carts.
+database used: firebase.
 
 
 ```flow
