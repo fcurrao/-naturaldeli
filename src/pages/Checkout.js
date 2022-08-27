@@ -48,7 +48,7 @@ const Checkout = () => {
 
     }) 
 
-
+ 
     
 // w.target.name (queda: name, phone y email)
  const handleChange = (e) => {
