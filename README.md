@@ -4,6 +4,15 @@
 
 This project was bootstrapped with [Create React App] 
 
+#The client requested an ecommerce for his company
+                    
+## Guia
+                    
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell 
+
 
 ## Previews:
 ![1](https://user-images.githubusercontent.com/68132577/182894870-611ba116-0154-470a-aaf8-74ba310e3cd9.jpg)
@@ -33,6 +42,19 @@ On the page you can see the products, filtered by offer, price, categories, thei
 And clearly you will be able to buy them.\
 Made with Apis and backEnd-mock.\
 On the page you can log in to save your carts.
+
+
+```flow
+st=>start: Login
+op=>operation: Login operation
+cond=>condition: Successful Yes or No?
+e=>end: To admin
+
+st->op->cond
+cond(yes)->e
+cond(no)->op
+```
+
 
 ## Available Scripts
   
