@@ -21,7 +21,7 @@ const Checkout = () => {
     let subtotal = 0
     const { addProductToCart, cartProducts, clear, removeProductToCart, quantitiSelected, setQuantitiSelected , setCantidadXCarro, removeONEProductToCart, cantidadXCarro } = useContext(CartContext)
     const { id, title, description, image, category, filtradito, price, qty, stock } = cartProducts
-    const {totalPrice} = useContext(CartContext)
+    const {totalPrice } = useContext(CartContext)
 
     const [succes, setSucces] = useState()
     const [showModal, setShowModal] = useState(false)
@@ -76,7 +76,7 @@ const pushDatatoFireabase = async (newOrder) => {
   const orderDoc = await addDoc(collectionOrder, newOrder)
   setSucces(orderDoc.id)
   console.log('ORDER GENERADA ', orderDoc)
-  clear()
+  clear()   
 }
 
 
@@ -166,7 +166,7 @@ const pushDatatoFireabase = async (newOrder) => {
                  
 
                     <Link to={`/productos`}>
-                        <button className="btn btn-group2 bttn  float-left margin3"> Seguir comprando ...</button>
+                        <button className=" btn btn-group2 bttn  float-left margin3 cvred"> Seguir comprando ...</button>
                     </Link>
                     <img className='margin2' src={`../assets/img/tarjetas.png`} alt="Imagen tarjetas" />
                     <div className='medioo'>
@@ -189,8 +189,8 @@ const pushDatatoFireabase = async (newOrder) => {
             </section>
             {showModal &&  <Modal title="Datos de contacto" setModalState={() => setShowModal(false)}>
                       {succes ? <>  
-                        <h3>Su orden fue Generada correctamente  </h3>
-                        <p> Id de compra {succes}</p>
+                        <h3>Su orden fue Generada correctamente  </h3><br />
+                        <p> Id de compra: <h2 className='red'>{succes}</h2></p>
 
                         </> : <>
                         <h3>Formulario de compra</h3>

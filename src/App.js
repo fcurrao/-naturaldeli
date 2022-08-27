@@ -28,7 +28,7 @@ function App() {
             <Route path="/-naturaldeli/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
-            <Route path="/descuento" element={<Descuento />} />
+            <Route path="/descuento/:filtradito" element={<Descuento />} />
             <Route path="/productos/" element={<Products />} />
             <Route path="/productos/:id" element={<Detail />} />
             <Route path="/categorias/:categoryid" element={<ItemListContainer />} />

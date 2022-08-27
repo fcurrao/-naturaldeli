@@ -4,10 +4,21 @@
     padding-top: 30px;
 }
 
-.centrado img{
- width: 80%;
+.centrado2 {
+opacity: 0.1;
 }
 
+.centrado img{
+ width: 55%;
+}
+
+.kkk img{
+    width: 82% !important;
+   }
+
+   .cvred{
+    background-color:red !important;
+   }
 .productboton{
     left: 50%; 
     z-index: 2;
@@ -56,8 +67,7 @@
     padding: 2px !important;
     margin-top: 1% !important;
     margin-bottom: 1% !important;
-    text-align: center;
-    background-color: blue !important;
+    text-align: center; 
 }
 
 
@@ -86,8 +96,11 @@ justify-content: center;
 }
 
 .red{
-   color: white !important;
-    background-color: red !important;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-style: oblique;
+    font-size: x-large;
+    color: rgb(191 46 46) !important;
 }
 
 .azul{

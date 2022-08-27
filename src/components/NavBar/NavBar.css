@@ -108,8 +108,21 @@ color: rgb(51,51,51,.6) !important;
  
 
 
+ 
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    position: absolute;
+    left: -60% !important;
+}
+#navbarDropdown{ 
+    left: -500% !important;
+    }
 
 
+.dropdown-menu.show {
+    width: min-content!important ;
+    display: block !important;
+    left: -50% !important;
+    }
 
 .dropdown-menu2{
     position: absolute;

@@ -1,14 +1,23 @@
-
+import { useState } from "react"
 import ItemListContainer from "../components/ItemListContainer/ItemListContainer"
 import "../pages/pages.css"
 import { Link } from 'react-router-dom'
 
 const home = () => {
 
+  // const [showModal, setShowModal] = useState(false)
 
 
 return (
 
+
+//   centrado
+
+// opacity: 0.1;
+
+  // <section className={showModal ?  "centrado2"  :  "centrado"  } >
+
+  //  {showModal? console.log("sadesa") : console.log("sadesaaaa")}
 
 <section className="centrado">
 <h1 className="titulo"> BIENVENIDOS A NATURAL DELI</h1>
@@ -21,7 +30,7 @@ return (
 
 
 
-<div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="true">
+<div id="carouselExampleIndicators" className="carousel slide kkk" data-bs-ride="true">
   <div className="carousel-indicators">
     <button  type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="colornegro active" aria-current="true" aria-label="Slide 1"></button>
     <button className="colornegro" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>

@@ -81,7 +81,12 @@ const registrarse = () => {
 
 
   const ingresaRegistro = (e) =>{
-
+ 
+    if(formDataUser.password ==undefined && formDataUser.password2 ==undefined && formDataUser.adress ==undefined  && formDataUser.phone==undefined   && formDataUser.email==undefined  && formDataUser.name==undefined  ){
+      swal("Debes completar todos los datos"); 
+      e.preventDefault() 
+    
+    } else { 
     if(formDataUser.password == formDataUser.password2){
       setFormdataUser({...formDataUser,[ e.target.name] : e.target.value})
       setUserOK({...userOK,[ e.target.name] : e.target.value})
@@ -94,6 +99,7 @@ const registrarse = () => {
       swal("Las contraseñas no coinciden"); 
 
     }
+  }
   }
   // ingresaNewUser({formDataUser})
 
@@ -138,8 +144,9 @@ const registrarse = () => {
     console.log( "1 o  2  :", e.target.value)
   }
 
-const enviarbusqueda = () => {
+const enviarbusqueda = (e) => {
   console.log( busqueda)
+  e.preventDefault()
 
 }
 
@@ -165,10 +172,11 @@ const enviarbusqueda = () => {
         <sector id="unosector">
         < div id="unosectordiv">
           <div className='sinborde'>
-            <input className='sinborde inputsito' type='text' placeholder="Buscar productos, marcas y más…" onChange={buscandoInput}  ></input>
-            
-            <button onClick={enviarbusqueda}   >SEARCH</button>
-            
+          <form className='sinborde'>
+            <input className='sinborde inputsito' type='search' placeholder="Buscar productos, marcas y más…" onChange={buscandoInput}  ></input>
+            <input type="submit" value="Buscar" onClick={enviarbusqueda}></input> 
+            {/* <button onClick={enviarbusqueda}   >SEARCH</button> */}
+            </form>
           </div>
           </div>
           < div id="unosectordivdos">
@@ -192,6 +200,9 @@ const enviarbusqueda = () => {
               </li>
               <li className="nav-item">
                 <Link to="/descuento" className="nav-link letritas" href="index.html">Descuento</Link>
+              </li> 
+              <li className="nav-item">
+                <Link to="/Ordenes" className="nav-link letritas" href="index.html">Favoritos </Link>
               </li>
               <li className="nav-item">
                 <Link to="/Ordenes" className="nav-link letritas" href="index.html">Busca Tu orden </Link>
@@ -207,7 +218,7 @@ const enviarbusqueda = () => {
                   <Link to="/categorias/Frescos" className="dropdown-item letritas" href="#">Frescos</Link>
                   <Link to="/categorias/Dulces" className="dropdown-item letritas" href="#">Dulces</Link>
                   <div className="dropdown-divider"></div>
-                  <Link to="/descuento" className="dropdown-item letritas" href="#">Nuevos Productos</Link>
+                  <Link to="/productos" className="dropdown-item letritas" href="#">Nuevos Productos</Link>
                 </div>
               </li>
 
@@ -232,24 +243,28 @@ const enviarbusqueda = () => {
            
           
           {showLogin ? <>  
+          
                
           {console.log("xxxxxx", userOK.email)}
                     <botton className="nav-link disabled btn3 lgrande" href="index.html" onClick={salirQ}> {userOK.email}  </botton>
 
-                    {showSalir &&  <Modal title="Datos de contacto" setModalState={() => setShowSalir(false)} >
+                    {showSalir && 
+                    <>
+
+  <Modal title="Datos de contacto" setModalState={() => setShowSalir(false)} >
 
           <h2> Usuario: {userOK.name}  </h2><br></br>
           <h2> Email: {userOK.email}  </h2><br></br>
           
 
           <Link to="/usuario" className="dropdown-item letritas" href="#">
-          <botton className="nav-link disabled btn3 lgrande" href="#" onClick={salirQ2}> Mis compras - Perfil </botton>
+          <botton className="nav-link disabled btn3 lgrande" href="#" onClick={salirQ2}> Mi Perfil </botton>
           </Link>
 
 
           <botton className="nav-link disabled btn3 lgrande" href="index.html" onClick={cerrarSesion}> CERRAR SESION  </botton>
          
-          </Modal> }
+          </Modal> </>}
 
 
 
@@ -261,7 +276,10 @@ const enviarbusqueda = () => {
       </>
 }
 
-{showModal &&  <Modal title="Datos de contacto" setModalState={() => setShowModal(false)}>
+{showModal &&  
+<>
+  
+  <Modal title="Datos de contacto" setModalState={() => setShowModal(false)}>
 <h3>Formulario de Usuario</h3>
                         <form    onSubmit={ingresaNewUser}
                         >
@@ -291,10 +309,11 @@ const enviarbusqueda = () => {
                             
 
 
-  </Modal>}
-  {showRegistrarse &&  <Modal title="Datos de contacto" setModalState={() => setShowRegistrarse(false)} >
+  </Modal></>}
+  {showRegistrarse &&  <Modal   title="Datos de contacto" setModalState={() => setShowRegistrarse(false)} >
+
 <h1>BIENVENIDO</h1>
-<h1>Ingrese los datos</h1>
+<h1>Ingrese todos los datos</h1>
 <form    onSubmit={ingresaRegistro}
                         >
 

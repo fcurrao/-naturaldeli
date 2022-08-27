@@ -66,36 +66,34 @@ const CartWidget = () => {
                             </div>
                             {cartProducts.map((product) => {
                                 return <>
-                                    <div className="item-product margin hoverr">
-                                        <img src={`../assets/img/${product.image}`} alt="Imagen producto" />
+                                    <div className="item-productxx margin hoverr">
+                                        <img  className="imgcart" src={`../assets/img/${product.image}`} alt="Imagen producto" />
                                         {/* {namee} */}
-                                        <div className="item-product2" >
-                                            <span className="chiquito1 badge badge-warning">{product.category}</span>
-                                            <p className='description2'>Producto Organico</p>
-                                            <h1>{product.title}</h1>
-                                            <p className='description2'>{product.description}</p>
-                                            <h2 className='description2'>{product.qty} Unidades de </h2>
-
-                                            <span className="btn2 btn btn-primary">$ {product.price}</span><br></br>
+                                        <div  > 
+                                            <h3>{product.title}</h3> 
+                                            
                                             <div className='none'>
                                                 {subtotal = product.price * product.qty}
                                                 {total = subtotal + total}
+                                           
+                                        
                                             </div>
-                                            <h2 className='description2'>Total: {subtotal}</h2>
-
+                                          
+                                           
                                             <div>
                                                 <button className="btn btn-group2 bttn" onClick={() => removeProductToCart(product)}>Remover</button>
                                                 
-
+                                                
 
                                                 <Link to={`/productos/${product.id}`}>
                                                     <button className="btn btn-group2 bttn" >Agregar mas</button>
                                                 </Link>
-
+                                             
                                             </div>
 
-                                        </div>
-
+                                        </div>     <div><h4 className='description2'>{product.qty} Unidades  </h4> 
+                                          </div>
+                                            <div>   <h4 className='description2'>Total: {subtotal}</h4></div>
                                     </div>
 
                                 </>

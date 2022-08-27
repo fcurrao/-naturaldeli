@@ -20,6 +20,29 @@ otro parecido
 https://materializecss.com/icons.html
 
 
+- editando el read me README : 
+
+https://pandao.github.io/editor.md/en.html
+
+
+
+- TRAERSE UN REPOSITORIO:
+
+Ejercicio de Optimizacion de codigo - CoderHouse Pasos para intalación
+
+Clonar el repositorio utilizando el comando
+
+git clone https://github.com/cortiz2894/workshop_-exercise.git
+
+Una vez dentro de la carpeta del proyecto instalar las dependencias utilizando el comando:
+
+npm i
+
+Cuando haya terminado la instalacion levantar el servidor local para correr el proyecto:
+
+npm run start
+
+
 
 /////////////////////////////////////////////////////////////////////////////////
 
@@ -1729,12 +1752,15 @@ const pushDatatoFireabase = async (newOrder) => {
 <
 **********************************************************
 ***************************************
-CLASE 13 | realizando un CRUD..
+CLASE 13 | realizando un CRUD.. BASE DE DATOS (firebase o mysql)
 ***************************************
 **********************************************************
 
 
-
+crear datos
+leer y buscar datos
+modificar datos
+borrar datos
 
 
 
@@ -1748,24 +1774,82 @@ CLASE 14 |  WORKSHOP ( taller )
 **********************************************************
 
 
+- clonar y realizar un challenge de entrevista trabajo.
+
+-
+
+-
+
+
+-  BUSQUEDA EN UNA API
+
+la api te va a decir como buscarla: ejemplo: api/product/search=q=${id}
+
+VER HEADER PARA BUSQUEDA: 
+guardo en estado la busqueda
+
+luego si tiene la palabra search va a tal url
+/items?search=${busquedaqueescribi}
+
+con un useeffect que cambie cuando cambia la busquedaqueescribi y  me muestre el listado.
+
+busca de la api
 
 
 
 
+- TRAERSE UN REPOSITORIO:
 
+Ejercicio de Optimizacion de codigo - CoderHouse Pasos para intalación
+
+Clonar el repositorio utilizando el comando
+
+git clone https://github.com/cortiz2894/workshop_-exercise.git
+
+Una vez dentro de la carpeta del proyecto instalar las dependencias utilizando el comando:
+
+npm i
+
+Cuando haya terminado la instalacion levantar el servidor local para correr el proyecto:
+
+npm run start
+
+
+
+-- Mercadolibre challenge:
+
+ejemplo 1
+https://github.com/cortiz2894/workshop_-exercise
+
+ejemplo 2
+https://stackblitz.com/edit/react-vu48dj?file=src%2FApp.js,src%2Fcomponents%2FItemListContainer.jsx
 
 
 
 <
 **********************************************************
 ***************************************
-CLASE 15 | 
+CLASE 15 | BUENAS PRACTICAS ! 
 ***************************************
 **********************************************************
 
 
 
 
+
+
+
+- BUENAS PRACTICAS
+- SCRUM
+- OPITIMIZADO
+- SIMPLE / NO ES NECESARIO /  DONT REPEAT 
+-
+-
+-
+
+editando el readme : 
+
+https://pandao.github.io/editor.md/en.html
 
 
 
