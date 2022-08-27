@@ -38,7 +38,7 @@ function App() {
           {/* <footer> FOOTER</footer> */}
         </div>
       </BrowserRouter>
-      </CartProvider>
+    </CartProvider>
   );
 }
 

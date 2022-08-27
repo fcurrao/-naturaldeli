@@ -1,82 +1,82 @@
-
-.centrado{
+.centrado {
     text-align: center;
     padding-top: 30px;
 }
 
 .centrado2 {
-opacity: 0.1;
+    opacity: 0.1;
 }
 
-.centrado img{
- width: 55%;
+.centrado img {
+    width: 55%;
 }
 
-.kkk img{
+.kkk img {
     width: 82% !important;
-   }
+}
 
-   .cvred{
-    background-color:red !important;
-   }
-.productboton{
-    left: 50%; 
+.cvred {
+    background-color: red !important;
+}
+
+.productboton {
+    left: 50%;
     z-index: 2;
-    position: initial; 
+    position: initial;
     width: 20%;
-    height: 56px; 
+    height: 56px;
     background-color: black !important;
     border-radius: 0rem !important;
     color: white;
 }
 
-.titulo{
+.titulo {
     text-decoration: overline;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-decoration-color: rgb(132, 131, 131);
     color: rgb(132, 131, 131);
 }
 
-.titulo2{
-    text-decoration:underline;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.titulo2 {
+    text-decoration: underline;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-decoration-color: rgb(132, 131, 131);
     color: rgb(132, 131, 131);
 }
 
-.fondo{
-  background-image: url("/public/assets/img/tiendadeli.jpg");
-  background-size: cover;
-  width: 90%;
-  height: 500px; 
+.fondo {
+    background-image: url("/public/assets/img/tiendadeli.jpg");
+    background-size: cover;
+    width: 90%;
+    height: 500px;
 }
 
-.margin2{
-    width: 100%;    
+.margin2 {
+    width: 100%;
     padding: 8px !important;
-    margin-top: 4% !important; 
+    margin-top: 4% !important;
     text-align: center;
 }
 
 
 
-.margin3{ 
+.margin3 {
     width: 70%;
     margin-left: 15%;
     border: 1px solid black !important;
     padding: 2px !important;
     margin-top: 1% !important;
     margin-bottom: 1% !important;
-    text-align: center; 
+    text-align: center;
 }
 
 
-.inputt{
+.inputt {
     padding: 5px;
     margin: 10px;
 }
 
-.margin4{
+.margin4 {
     width: 18%;
     border: 1px solid black !important;
     padding: 2px !important;
@@ -85,17 +85,17 @@ opacity: 0.1;
     text-align: center;
 }
 
-.medioo{
-width: 100%;
-text-align: center;
-display: flex;
-flex-direction: row;
-flex-wrap: nowrap;
-align-content: flex-end;
-justify-content: center;
+.medioo {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-end;
+    justify-content: center;
 }
 
-.red{
+.red {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
     font-style: oblique;
@@ -103,74 +103,75 @@ justify-content: center;
     color: rgb(191 46 46) !important;
 }
 
-.azul{
-    color:  blue !important;
+.azul {
+    color: blue !important;
     font-size: 30px;
- }
- 
- 
+}
 
 
-.colorblanco{
+
+
+.colorblanco {
     background-color: white;
     color: white;
 }
-.colornegro{
+
+.colornegro {
     background-color: black;
     color: black;
 }
 
-.padding{
-padding-left: 10%;
+.padding {
+    padding-left: 10%;
 }
 
-.pointer{
+.pointer {
     cursor: pointer;
     opacity: 10 !important;
 
 }
 
-.float-left{
+.float-left {
     float: left;
 }
 
-.next{
+.next {
     padding-right: 180px;
     opacity: 10 !important;
     color: white;
 
 }
 
-.prev{
+.prev {
     padding-left: 180px;
     opacity: 10 !important;
-        color: white;
+    color: white;
 }
 
 
-.letrasGaleria{
+.letrasGaleria {
     box-sizing: border-box;
     text-decoration: solid;
     font-weight: 900;
     opacity: 10 !important;
-        color: white;
+    color: white;
 }
 
-.bttn{
+.bttn {
     margin-right: 10px;
 }
 
-.zoomosetentaycinco{
+.zoomosetentaycinco {
     zoom: 75%
 }
 
-.inputtbig{
-width: 400px;
-height: 200px;
+.inputtbig {
+    width: 400px;
+    height: 200px;
 }
 
 
-.formulario{
+.formulario {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -191,21 +192,23 @@ height: 200px;
 }
 
 .imagen {
-width: 50%;
+    width: 50%;
 }
 
-.imagen img{     width: 90% !important;}
+.imagen img {
+    width: 90% !important;
+}
 
-.texto{
+.texto {
     font-size: 16px;
     padding-left: 80px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        padding-right: 20px;
-        line-height: 1.8;
-width: 50%;
+    padding-right: 20px;
+    line-height: 1.8;
+    width: 50%;
 }
 
-.subtexto{
-        font-size: 20px;
-        line-height: 1.6;
+.subtexto {
+    font-size: 20px;
+    line-height: 1.6;
 }

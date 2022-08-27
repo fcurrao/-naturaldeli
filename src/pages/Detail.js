@@ -2,18 +2,15 @@
 import ItemDetailContainer from '../components/ItemDetailContainer/ItemDetailContainer'
 
 
-const Detail = ({}) => {
+const Detail = ({ }) => {
 
 
 
-return (
-<div>
-<ItemDetailContainer/>
+    return (
+        <div><ItemDetailContainer /></div>
 
-</div>
-        
     )
-     }
-    
-    export default Detail
+}
+
+export default Detail
 

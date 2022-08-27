@@ -1,20 +1,16 @@
 // import { Modal } from "bootstrap";
-
 import './Modal.css'
 import { useContext } from 'react'
 import CartProvider, { CartContext } from '../../context/CartContext'
 
 
-const Modal = ({setModalState, children}) => {
+const Modal = ({ setModalState, children }) => {
 
- 
- 
-    return(
+    return (
         <div className="modal-custom">
-         <button className="zz" onClick={() => setModalState(false)}>X</button>
-        
-                {children}
-            </div> 
+            <button className="zz" onClick={() => setModalState(false)}>X</button>
+            {children}
+        </div>
     )
 }
 

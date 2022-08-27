@@ -1,7 +1,6 @@
 import '../ItemProduct/ItemProduct.css'
 import ItemCount from '../ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
-import { useParams } from 'react-router-dom'
 import { useState } from 'react'
 import CartProvider, { CartContext } from '../../context/CartContext'
 import { useContext } from 'react'
@@ -10,10 +9,9 @@ import Modal from '../Modal/Modal'
 
 const ItemDetail = ({ data }) => {
 
-    const { id, title, type, description, image, image2, image3, qty, category, filtradito, price, stock } = data
-    const { addProductToCart, cartProducts, clear, removeProductToCart, quantitiSelected, setQuantitiSelected, setCantidadXCarro, removeONEProductToCart, cantidadXCarro } = useContext(CartContext)
+    const { id, title, type, description, image, image2, qty , image3, category, price, stock } = data
+    const { cartProducts, quantitiSelected, cantidadXCarro } = useContext(CartContext)
 
-    const { categoryid, todos } = useParams()
     const [imagensita, setImagensita] = useState('')
     const [fotoGrande, setFotoGrande] = useState(1)
     const [modaleState, setModalState] = useState(false)
@@ -21,9 +19,6 @@ const ItemDetail = ({ data }) => {
     const en12cuotasSub = (price / 12);
     const en12cuotas = en12cuotasSub.toFixed(2);
 
-    const onSubmitDetalle = () => {
-        console.log("Tocaste Boton   detalle producto")
-    }
 
     const onSubmitComprar = () => {
         console.log("Tocaste Boton   COMPRAR")
@@ -48,9 +43,6 @@ const ItemDetail = ({ data }) => {
     const onSubmitChangePicture3 = () => {
         setFotoGrande(3)
     }
-
-
-
 
 
     const onModal1 = () => {
@@ -106,15 +98,10 @@ const ItemDetail = ({ data }) => {
                             <span className="btn2 btn btn-primary">$ {price}</span><br></br>
                             <p className='red' >pagalo en 12 cuotas de {en12cuotas}</p>
                             <select className='padbot' >
-                            <p>Tipo:</p>
-
-                            
-
-
+                                <p>Tipo:</p>
                                 {type.map((t) => {
                                     return <option>{t}</option>
-                                })}
- <br></br> <br></br> <br></br> <br></br>
+                                })}<br></br>
                                 <br></br>
                             </select >
                             <span className="badge badge-danger">RECOMENDADO</span>
@@ -126,19 +113,19 @@ const ItemDetail = ({ data }) => {
                                     <>
                                         {console.log("quantitiSelected", quantitiSelected)}
                                         <div className='padtop'><h4>Agrego al carro :  {quantitiSelected} unidades</h4>
-                                        <Link to={`/cart`}>
-                                            <button className="btn btn-group btnx2" onClick={onSubmitComprar}>Terminar Compra</button>
-                                        </Link>
-                                        <Link to={`/productos`}>
-                                            <button className="btn btn-group btnx2" onClick={onSubmitComprar}>Seguir comprando...</button>
-                                        </Link>
+                                            <Link to={`/cart`}>
+                                                <button className="btn btn-group btnx2" onClick={onSubmitComprar}>Terminar Compra</button>
+                                            </Link>
+                                            <Link to={`/productos`}>
+                                                <button className="btn btn-group btnx2" onClick={onSubmitComprar}>Seguir comprando...</button>
+                                            </Link>
                                         </div>
                                     </>
                                     :
                                     <><div className='padtop'>
                                         <ItemCount productData={data} stock={stock} initial={1} />
                                         <p className='chiquito1'>stock disponible: {stock}</p>
-                                        </div>
+                                    </div>
                                     </>
                             }
                             {modaleState && <Modal className="custom2" data={data} setModalState={setModalState} imagensita={imagensita}>
@@ -146,21 +133,13 @@ const ItemDetail = ({ data }) => {
                                 <div className="item-product22"  >
                                     <h2>{title}</h2>
                                     <img className="imgzoom" src={`../assets/img/${imagensita}`} alt="Imagen producto" />
-
                                 </div>
                             </Modal>}
 
                         </div>
                     </div>
                 </div>
-            </> : <><h1>NO EXISTE ESTE PRODUCTO</h1></>}
-
-
-
-
-
-
-        </>
+            </> : <><h1>NO EXISTE ESTE PRODUCTO</h1></>}  </>
     )
 }
 

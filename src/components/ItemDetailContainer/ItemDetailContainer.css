@@ -1,16 +1,13 @@
-
-
-
 .minimoContenido {
-text-align: center !important;
-float: inline-start !important;
- background-color: beige !important; 
+    text-align: center !important;
+    float: inline-start !important;
+    background-color: beige !important;
 }
 
 
 
-.conteinerStyling{
+.conteinerStyling {
     text-align: center !important;
     float: inline-start !important;
-    background-color: beige !important; 
-    }
+    background-color: beige !important;
+}

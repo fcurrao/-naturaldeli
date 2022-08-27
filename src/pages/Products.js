@@ -6,16 +6,16 @@ import ItemListContainer from "../components/ItemListContainer/ItemListContainer
 const Products = () => {
 
 
-return (
+      return (
 
 
-<section>
-      <ItemListContainer className="cotenedores" secciones="Productos en oferta" />
-      </section>
+            <section>
+                  <ItemListContainer className="cotenedores" secciones="Productos en oferta" />
+            </section>
 
 
 
-)
+      )
 
 
 }

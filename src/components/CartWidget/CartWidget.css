@@ -1,5 +1,5 @@
-.carritoDerecha { 
-    color: black!important;
+.carritoDerecha {
+    color: black !important;
     background-color: transparent;
     float: right;
     width: 5%;
@@ -12,11 +12,11 @@
 
 }
 
-.carro{ 
+.carro {
     width: 80%;
 }
 
-.none{
+.none {
     display: none;
 }
 
@@ -26,46 +26,43 @@
     left: -600% !important;
 }
 
-.btnBlue{
+.btnBlue {}
 
-}
-
-.btncarro{
+.btncarro {
     background: none !important;
     width: 120% !important;
     margin: none !important;
 }
 
 
-.btncarro:hover{  
+.btncarro:hover {
     margin: none !important;
     background-color: transparent !important;
 }
 
 
-.carro{
+.carro {
     width: 85%;
-} 
+}
 
-.btnp{
- background-color: blue !important;
+.btnp {
+    background-color: blue !important;
 }
 
 #nadda {
-    width: max-content !important; 
+    width: max-content !important;
     left: -300% !important;
 }
 
-.ajam{
+.ajam {
     width: min-content;
     display: block !important;
     left: -5% !important;
 }
 
-.item-product2x{
-    
-}
-.item-productxx{    
+.item-product2x {}
+
+.item-productxx {
     color: black;
     display: flex !important;
     align-items: center;
@@ -90,10 +87,12 @@
     height: 200px !important;
 }
 
-.imgcart{    width: 33%;
+.imgcart {
+    width: 33%;
     margin-bottom: 18px;
 }
-.item-productx{
+
+.item-productx {
     width: 450px !important;
     color: black;
     display: flex !important;
@@ -105,7 +104,7 @@
     background-color: white !important;
     float: left;
     box-shadow: 12px 5px 20px #afafaf47 !important;
-    border: 2px !important;   
+    border: 2px !important;
     border-style: dashed solid !important;
     text-align: center;
     position: relative;
@@ -113,37 +112,37 @@
     margin-bottom: 10px;
     padding-bottom: 8px;
     zoom: 72%;
-      float: left;
-      box-shadow: 1px 1px 5px #afafaf47; 
-      display: flex; 
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      position: relative;
-      margin-right: 10px;
-      margin-bottom: 10px;
-      padding-bottom: 8px;
+    float: left;
+    box-shadow: 1px 1px 5px #afafaf47;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
     transition: all ease 0.4s;
 
 }
 
 
-.bttn{
+.bttn {
     margin: 2px;
     margin-left: 10px;
 }
- 
+
 
 .dropdown-menu.show {
-width: min-content!important ;
-display: block !important;
-left: -300% !important;
+    width: min-content !important;
+    display: block !important;
+    left: -300% !important;
 }
 
 
 
 .dropdown-menu.show2 {
-    width: min-content!important ;
+    width: min-content !important;
     display: block !important;
     left: -5% !important;
-    }
+}

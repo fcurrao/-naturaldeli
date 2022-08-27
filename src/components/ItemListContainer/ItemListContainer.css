@@ -9,10 +9,11 @@
 }
 
 
-.centrado{
+.centrado {
     padding: 30px, 20px, 20px, 20px;
     text-align: center;
 }
+
 .minimoContenido {
     width: 100%;
     float: left;

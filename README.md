@@ -1,38 +1,46 @@
 
-# BIENVENIDOS A NATURAL DELI
+
+# Welcome to NATURAL DELI
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App] 
 
 #The client requested an ecommerce for his company
                     
-## Guia
+## Applied technologies
                     
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell 
+Tecnologias Front  | Tecnologias Back
+------------------ | ------------------
+HTML+CSS+Js        |    Node js
+React JS           |    Firebase 
 
-
-## Previews:
-![1](https://user-images.githubusercontent.com/68132577/182894870-611ba116-0154-470a-aaf8-74ba310e3cd9.jpg)
-
-........................................................................................
-........................................................................................
-
-
-![2](https://user-images.githubusercontent.com/68132577/182894889-a68f7b88-bfd3-4947-8f20-3173818f83cb.jpg)
 
 ## Description
 This is the site of a small local market. Where they sell healthy products.
 
 
+## Previews:
+![pw1](https://user-images.githubusercontent.com/68132577/187032711-0a65422d-e645-4ca4-b52c-e4efef0ec443.png)
+
+![pw2](https://user-images.githubusercontent.com/68132577/187032716-b204658a-f5b0-4087-b88d-e38760d89a47.png)
+
+........................................................................................
+........................................................................................
+
+![pw3](https://user-images.githubusercontent.com/68132577/187032718-3f0540df-0b01-4bbd-b862-25d7ba16b9dc.png)
 
 
-https://user-images.githubusercontent.com/68132577/185184777-bd95e19e-d419-40ba-b337-1ea8d14927d6.mp4
+
+
+## Video:
+https://user-images.githubusercontent.com/68132577/187032747-2948bf2f-9f11-4f6c-ba28-8cb10b563914.mp4
 
 
 
+
+........................................................................................
+
+## This is our home..
 
 ![image](https://github.com/fcurrao/-naturaldeli/blob/main/public/assets/img/tiendadeli.jpg)
 
@@ -42,6 +50,7 @@ On the page you can see the products, filtered by offer, price, categories, thei
 And clearly you will be able to buy them.\
 Made with Apis and backEnd-mock.\
 On the page you can log in to save your carts.
+database used: firebase.
 
 
 ```flow
