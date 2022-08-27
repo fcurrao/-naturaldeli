@@ -107,7 +107,6 @@ const ItemDetail = ({ data }) => {
                             <span className="badge badge-danger">RECOMENDADO</span>
                         </div>
                         <div className="item-product2 esp">
-
                             {
                                 quantitiSelected > 0 ?
                                     <>
